@@ -1,0 +1,14 @@
+{
+  "license": "MIT",
+  "scripts": {
+    "update-json": "yarn ts-node Scripts/updateJSON.ts",
+    "generate-from-json": "yarn ts-node Scripts/generateFromJSON.ts"
+  },
+  "devDependencies": {
+    "@types/shelljs": "^0.8.1",
+    "prettier": "^1.15.3",
+    "shelljs": "^0.8.3",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  }
+}
