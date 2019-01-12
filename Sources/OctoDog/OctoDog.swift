@@ -21,7 +21,7 @@ public struct OctoDog {
     }
 
     public struct Response<ResponseType> {
-        let body: ResponseType
+        let body: ResponseType?
         let error: Error?
     }
 

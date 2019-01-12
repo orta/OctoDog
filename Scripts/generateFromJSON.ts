@@ -1,21 +1,37 @@
-import { ls } from "shelljs";
-import { readFileSync, fstat, writeFileSync } from "fs";
+import { ls, exec } from "shelljs";
+import { readFileSync, writeFileSync } from "fs";
 import { Route } from "./routes";
 import { toClassName, fileTemplate, toVarName } from "./fileTemplate";
 import { basename } from "path";
+import { dedupeStructFiles } from "./dedupeStructsClasses";
 
-const skipFiles = ["sections.json"]
+
+const skipFiles = ["sections.json", "index.json"]
+const skipRoutes = ["Stubbed"]
+
+// for only testing a subset, e.g. 'meta'
+const onlyRunSectionWithThisInIt = ""
+
+
+const main = async () => {
+  const apiRoot = "vendor/routes/routes/api.github.com"
+  await createFilesForFolder(apiRoot, "OctoDog")
+  // await dedupeStructFiles("Sources/OctoDog/__Generated")
+  exec("swift run swiftformat Sources/OctoDog/__Generated")
+  exec("swift run swiftlint autocorrect --path Sources/OctoDog/__Generated")
+}
 
 const shouldSkip = (path: string) =>  
   !!skipFiles.find((skip => path.includes(skip)))
   
-const writeLeafFile = (path: string, parent: string) => {
+const writeLeafFile =  async (path: string, parent: string) => {
   if (shouldSkip(path)) {
     return
   }
-
-  // A leaf node would always be a a single API route
-  const routes: Route[] = JSON.parse(readFileSync(path, "utf8"))
+  console.log(path)
+  // A leaf node would always be a a single API section in the routes
+  const allRoutes: Route[] = JSON.parse(readFileSync(path, "utf8")) || []
+  const routes = allRoutes.filter(r => !skipRoutes.find(skip => r.name.includes(skip))) || []
   const name = basename(path, ".json")
   const className = toClassName(name)
   const varName = toVarName(name)
@@ -24,28 +40,25 @@ const writeLeafFile = (path: string, parent: string) => {
     varName,
     routes,
     className
-  }
-  const fileContent = fileTemplate(templateConfig)
+  } 
+
+  const fileContent = await fileTemplate(templateConfig)
   const newPathRoot = "Sources/OctoDog/__Generated/"
   const newPath = newPathRoot + className + ".swift"
   
-  console.log("Wrote", className, "at", newPath)
+  console.log("Writing ", className, " at ", newPath)
   writeFileSync(newPath, fileContent, "utf8")
 }
 
-const createFilesForFolder = (folder: string, parent: string) => {
+const createFilesForFolder = async (folder: string, parent: string) => {
   const rootFiles = ls(folder + "/*.json")
-
-  rootFiles.forEach(file => {
+  for (const file of rootFiles) {
     const fullPath = file //folder + "/" + file
-    if (file.endsWith(".json")) {
-      writeLeafFile(fullPath, parent)
-    } else {
-      createFilesForFolder(fullPath, file)
+    if (file.endsWith(".json") && file.includes(onlyRunSectionWithThisInIt)) {
+      await writeLeafFile(fullPath, parent)
     }
-  })
+  }
 }
 
-const apiRoot = "vendor/routes/routes/api.github.com"
-createFilesForFolder(apiRoot, "OctoDog")
 
+main()
