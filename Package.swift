@@ -35,6 +35,11 @@ let package = Package(
                 "git add .",
             ],
         ],
+        "rocket": [
+            "after": [
+                "push"
+            ]
+        ]
     ])
 #endif
 
