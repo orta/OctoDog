@@ -3,7 +3,13 @@ import Foundation
 
 extension OctoDog {
   struct Users {
-    
+
+// Generated Responses
+
+struct Email: Codable {
+    let email: String?
+    let verified: Bool?
+}
 struct GetASingleUserResponse: Codable {
     let login: String?
     let id: Int?
@@ -51,8 +57,6 @@ struct GetASingleUserResponse: Codable {
         case updatedAt = "updated_at"
     }
 }
-
-
 
 struct UpdateTheAuthenticatedUserResponse: Codable {
     let login: String?
@@ -124,8 +128,6 @@ struct Plan: Codable {
     }
 }
 
-
-
 typealias GetAllUsersResponse = [GetAllUsersResponseElement]
 
 struct GetAllUsersResponseElement: Codable {
@@ -162,8 +164,6 @@ struct GetAllUsersResponseElement: Codable {
         case siteAdmin = "site_admin"
     }
 }
-
-
 
 typealias ListBlockedUsersResponse = [ListBlockedUsersResponseElement]
 
@@ -202,22 +202,14 @@ struct ListBlockedUsersResponseElement: Codable {
     }
 }
 
-
-
 struct CheckWhetherYouVeBlockedAUserResponse: Codable {
 }
-
-
 
 struct BlockAUserResponse: Codable {
 }
 
-
-
 struct UnblockAUserResponse: Codable {
 }
-
-
 
 typealias ListEmailAddressesForAUserResponse = [ListEmailAddressesForAUserResponseElement]
 
@@ -227,8 +219,6 @@ struct ListEmailAddressesForAUserResponseElement: Codable {
     let visibility: String?
 }
 
-
-
 typealias ListPublicEmailAddressesForAUserResponse = [ListPublicEmailAddressesForAUserResponseElement]
 
 struct ListPublicEmailAddressesForAUserResponseElement: Codable {
@@ -236,8 +226,6 @@ struct ListPublicEmailAddressesForAUserResponseElement: Codable {
     let verified, primary: Bool?
     let visibility: String?
 }
-
-
 
 typealias AddEmailAddressEsResponse = [AddEmailAddressEsResponseElement]
 
@@ -247,12 +235,8 @@ struct AddEmailAddressEsResponseElement: Codable {
     let visibility: String?
 }
 
-
-
 struct DeleteEmailAddressEsResponse: Codable {
 }
-
-
 
 typealias TogglePrimaryEmailVisibilityResponse = [TogglePrimaryEmailVisibilityResponseElement]
 
@@ -261,8 +245,6 @@ struct TogglePrimaryEmailVisibilityResponseElement: Codable {
     let primary, verified: Bool?
     let visibility: String?
 }
-
-
 
 typealias ListAUserSFollowersResponse = [ListAUserSFollowersResponseElement]
 
@@ -301,8 +283,6 @@ struct ListAUserSFollowersResponseElement: Codable {
     }
 }
 
-
-
 typealias ListTheAuthenticatedUserSFollowersResponse = [ListTheAuthenticatedUserSFollowersResponseElement]
 
 struct ListTheAuthenticatedUserSFollowersResponseElement: Codable {
@@ -339,8 +319,6 @@ struct ListTheAuthenticatedUserSFollowersResponseElement: Codable {
         case siteAdmin = "site_admin"
     }
 }
-
-
 
 typealias ListWhoAUserIsFollowingResponse = [ListWhoAUserIsFollowingResponseElement]
 
@@ -379,8 +357,6 @@ struct ListWhoAUserIsFollowingResponseElement: Codable {
     }
 }
 
-
-
 typealias ListWhoTheAuthenticatedUserIsFollowingResponse = [ListWhoTheAuthenticatedUserIsFollowingResponseElement]
 
 struct ListWhoTheAuthenticatedUserIsFollowingResponseElement: Codable {
@@ -418,17 +394,11 @@ struct ListWhoTheAuthenticatedUserIsFollowingResponseElement: Codable {
     }
 }
 
-
-
 struct FollowAUserResponse: Codable {
 }
 
-
-
 struct UnfollowAUserResponse: Codable {
 }
-
-
 
 typealias ListPublicKeysForAUserResponse = [ListPublicKeysForAUserResponseElement]
 
@@ -436,8 +406,6 @@ struct ListPublicKeysForAUserResponseElement: Codable {
     let id: Int?
     let key: String?
 }
-
-
 
 typealias ListYourPublicKeysResponse = [ListYourPublicKeysResponseElement]
 
@@ -457,8 +425,6 @@ struct ListYourPublicKeysResponseElement: Codable {
     }
 }
 
-
-
 struct GetASinglePublicKeyResponse: Codable {
     let id: Int?
     let key: String?
@@ -474,8 +440,6 @@ struct GetASinglePublicKeyResponse: Codable {
         case readOnly = "read_only"
     }
 }
-
-
 
 struct CreateAPublicKeyResponse: Codable {
     let id: Int?
@@ -493,12 +457,8 @@ struct CreateAPublicKeyResponse: Codable {
     }
 }
 
-
-
 struct DeleteAPublicKeyResponse: Codable {
 }
-
-
 
 typealias ListGPGKeysForAUserResponse = [ListGPGKeysForAUserResponseElement]
 
@@ -527,40 +487,6 @@ struct ListGPGKeysForAUserResponseElement: Codable {
     }
 }
 
-struct Email: Codable {
-    let email: String?
-    let verified: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 typealias ListYourGPGKeysResponse = [ListYourGPGKeysResponseElement]
 
 struct ListYourGPGKeysResponseElement: Codable {
@@ -588,40 +514,6 @@ struct ListYourGPGKeysResponseElement: Codable {
     }
 }
 
-struct Email: Codable {
-    let email: String?
-    let verified: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct GetASingleGPGKeyResponse: Codable {
     let id: Int?
     let primaryKeyID: Int?
@@ -646,40 +538,6 @@ struct GetASingleGPGKeyResponse: Codable {
         case expiresAt = "expires_at"
     }
 }
-
-struct Email: Codable {
-    let email: String?
-    let verified: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
 
 struct CreateAGPGKeyResponse: Codable {
     let id: Int?
@@ -706,45 +564,9 @@ struct CreateAGPGKeyResponse: Codable {
     }
 }
 
-struct Email: Codable {
-    let email: String?
-    let verified: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct DeleteAGPGKeyResponse: Codable {
 }
 
-
-    
       // https://developer.github.com/v3/users/#get-a-single-user
       /// Provides publicly available information about someone with a GitHub account.
 ///
@@ -752,7 +574,7 @@ struct DeleteAGPGKeyResponse: Codable {
 ///
 ///The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see "[Emails API](https://developer.github.com/v3/users/emails/)".
       func getByUsername() -> Response<GetASingleUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -764,12 +586,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/#update-the-authenticated-user
       /// **Note:** If your email is set to private and you send an `email` parameter as part of this request to update your profile, your privacy settings are still enforced: the email address will not be displayed on your public profile or via the API.
       func updateAuthenticated() -> Response<UpdateTheAuthenticatedUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -781,14 +602,13 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/#get-all-users
       /// Lists all users, in the order that they signed up on GitHub. This list includes personal user accounts and organization accounts.
 ///
 ///Note: Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://developer.github.com/v3/#link-header) to get the URL for the next page of users.
       func list() -> Response<GetAllUsersResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -800,12 +620,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/blocking/#list-blocked-users
       /// List the users you've blocked on your personal account.
       func listBlocked() -> Response<ListBlockedUsersResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -817,14 +636,13 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/blocking/#check-whether-youve-blocked-a-user
       /// If the user is blocked:
 ///
 ///If the user is not blocked:
       func checkBlocked() -> Response<CheckWhetherYou'VeBlockedAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -836,12 +654,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/blocking/#block-a-user
       /// 
       func block() -> Response<BlockAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -853,12 +670,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/blocking/#unblock-a-user
       /// 
       func unblock() -> Response<UnblockAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -870,12 +686,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/emails/#list-email-addresses-for-a-user
       /// Lists all of your email addresses, and specifies which one is visible to the public. This endpoint is accessible with the `user:email` scope.
       func listEmails() -> Response<ListEmailAddressesForAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -887,12 +702,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/emails/#list-public-email-addresses-for-a-user
       /// Lists your publicly visible email address, which you can set with the [Toggle primary email visibility](#toggle-primary-email-visibility) endpoint. This endpoint is accessible with the `user:email` scope.
       func listPublicEmails() -> Response<ListPublicEmailAddressesForAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -904,12 +718,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/emails/#add-email-addresses
       /// 
       func addEmails() -> Response<AddEmailAddress(Es)Response> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -921,12 +734,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/emails/#delete-email-addresses
       /// 
       func deleteEmails() -> Response<DeleteEmailAddress(Es)Response> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -938,12 +750,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/emails/#toggle-primary-email-visibility
       /// Sets the visibility for your primary email addresses.
       func togglePrimaryEmailVisibility() -> Response<TogglePrimaryEmailVisibilityResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -955,12 +766,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/followers/#list-followers-of-a-user
       /// 
       func listFollowersForUser() -> Response<ListAUser'SFollowersResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -972,12 +782,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/followers/#list-followers-of-a-user
       /// 
       func listFollowersForAuthenticatedUser() -> Response<ListTheAuthenticatedUser'SFollowersResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -989,12 +798,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/followers/#list-users-followed-by-another-user
       /// 
       func listFollowingForUser() -> Response<ListWhoAUserIsFollowingResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1006,12 +814,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/followers/#list-users-followed-by-another-user
       /// 
       func listFollowingForAuthenticatedUser() -> Response<ListWhoTheAuthenticatedUserIsFollowingResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1023,14 +830,13 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/followers/#follow-a-user
       /// Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
 ///
 ///Following a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
       func follow() -> Response<FollowAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1042,12 +848,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/followers/#unfollow-a-user
       /// Unfollowing a user requires the user to be logged in and authenticated with basic auth or OAuth with the `user:follow` scope.
       func unfollow() -> Response<UnfollowAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1059,12 +864,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/keys/#list-public-keys-for-a-user
       /// Lists the _verified_ public SSH keys for a user. This is accessible by anyone.
       func listPublicKeysForUser() -> Response<ListPublicKeysForAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1076,12 +880,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/keys/#list-your-public-keys
       /// Lists the public SSH keys for the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
       func listPublicKeys() -> Response<ListYourPublicKeysResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1093,12 +896,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/keys/#get-a-single-public-key
       /// View extended details for a single public SSH key. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
       func getPublicKey() -> Response<GetASinglePublicKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1110,12 +912,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/keys/#create-a-public-key
       /// Adds a public SSH key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
       func createPublicKey() -> Response<CreateAPublicKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1127,12 +928,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/keys/#delete-a-public-key
       /// Removes a public SSH key from the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `admin:public_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
       func deletePublicKey() -> Response<DeleteAPublicKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1144,12 +944,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/gpg_keys/#list-gpg-keys-for-a-user
       /// Lists the GPG keys for a user. This information is accessible by anyone.
       func listGpgKeysForUser() -> Response<ListGPGKeysForAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1161,12 +960,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/gpg_keys/#list-your-gpg-keys
       /// Lists the current user's GPG keys. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
       func listGpgKeys() -> Response<ListYourGPGKeysResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1178,12 +976,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/gpg_keys/#get-a-single-gpg-key
       /// View extended details for a single GPG key. Requires that you are authenticated via Basic Auth or via OAuth with at least `read:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
       func getGpgKey() -> Response<GetASingleGPGKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1195,12 +992,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/gpg_keys/#create-a-gpg-key
       /// Adds a GPG key to the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth, or OAuth with at least `write:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
       func createGpgKey() -> Response<CreateAGPGKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1212,12 +1008,11 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/users/gpg_keys/#delete-a-gpg-key
       /// Removes a GPG key from the authenticated user's GitHub account. Requires that you are authenticated via Basic Auth or via OAuth with at least `admin:gpg_key` [scope](https://developer.github.com/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
       func deleteGpgKey() -> Response<DeleteAGPGKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1229,7 +1024,7 @@ struct DeleteAGPGKeyResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
+
   }
 
   var users: OctoDog.Users {

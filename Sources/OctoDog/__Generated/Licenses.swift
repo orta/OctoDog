@@ -3,7 +3,9 @@ import Foundation
 
 extension OctoDog {
   struct Licenses {
-    
+
+// Generated Responses
+
 typealias ListAllLicensesResponse = [ListAllLicensesResponseElement]
 
 struct ListAllLicensesResponseElement: Codable {
@@ -18,8 +20,6 @@ struct ListAllLicensesResponseElement: Codable {
         case nodeID = "node_id"
     }
 }
-
-
 
 struct GetAnIndividualLicenseResponse: Codable {
     let key, name, spdxID: String?
@@ -40,8 +40,6 @@ struct GetAnIndividualLicenseResponse: Codable {
         case description, implementation, permissions, conditions, limitations, body, featured
     }
 }
-
-
 
 struct GetTheContentsOfARepositorySLicenseResponse: Codable {
     let name, path, sha: String?
@@ -84,12 +82,10 @@ struct Links: Codable {
     }
 }
 
-
-    
       // https://developer.github.com/v3/licenses/#list-all-licenses
       /// 
       func list() -> Response<ListAllLicensesResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -101,12 +97,11 @@ struct Links: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/licenses/#get-an-individual-license
       /// 
       func get() -> Response<GetAnIndividualLicenseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -118,14 +113,13 @@ struct Links: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/licenses/#get-the-contents-of-a-repositorys-license
       /// This method returns the contents of the repository's license file, if one is detected.
 ///
 ///Similar to [the repository contents API](https://developer.github.com/v3/repos/contents/#get-contents), this method also supports [custom media types](https://developer.github.com/v3/repos/contents/#custom-media-types) for retrieving the raw license content or rendered license HTML.
       func getForRepo() -> Response<GetTheContentsOfARepository'SLicenseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -137,7 +131,7 @@ struct Links: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
+
   }
 
   var licenses: OctoDog.Licenses {

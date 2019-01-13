@@ -5,6 +5,8 @@
     "generate-from-json": "yarn ts-node Scripts/generateFromJSON.ts"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-typescript": "^7.1.0",
     "@types/jest": "^23.3.12",
     "@types/shelljs": "^0.8.1",
     "jest": "^24.0.0-alpha.12",

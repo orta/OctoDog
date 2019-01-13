@@ -1,3 +1,5 @@
+import Foundation
+
 // https://stackoverflow.com/questions/26784315/can-i-somehow-do-a-synchronous-http-request-via-nsurlsession-in-swift
 extension URLSession {
   func synchronousDataTask(with url: URL) -> (Data?, URLResponse?, Error?) {

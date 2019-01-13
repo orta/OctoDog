@@ -3,7 +3,119 @@ import Foundation
 
 extension OctoDog {
   struct Orgs {
-    
+
+// Generated Responses
+
+struct Config: Codable {
+    let url: String?
+    let contentType: String?
+
+    enum CodingKeys: String, CodingKey {
+        case url
+        case contentType = "content_type"
+    }
+}
+struct User: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct Organization: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let url, reposURL, eventsURL, hooksURL: String?
+    let issuesURL: String?
+    let membersURL, publicMembersURL: String?
+    let avatarURL: String?
+    let description: String?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case url
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case hooksURL = "hooks_url"
+        case issuesURL = "issues_url"
+        case membersURL = "members_url"
+        case publicMembersURL = "public_members_url"
+        case avatarURL = "avatar_url"
+        case description
+    }
+}
+struct Inviter: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct Plan: Codable {
+    let name: String?
+    let space, privateRepos: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case name, space
+        case privateRepos = "private_repos"
+    }
+}
 typealias ListYourOrganizationsResponse = [ListYourOrganizationsResponseElement]
 
 struct ListYourOrganizationsResponseElement: Codable {
@@ -30,8 +142,6 @@ struct ListYourOrganizationsResponseElement: Codable {
         case description
     }
 }
-
-
 
 typealias ListAllOrganizationsResponse = [ListAllOrganizationsResponseElement]
 
@@ -60,8 +170,6 @@ struct ListAllOrganizationsResponseElement: Codable {
     }
 }
 
-
-
 typealias ListUserOrganizationsResponse = [ListUserOrganizationsResponseElement]
 
 struct ListUserOrganizationsResponseElement: Codable {
@@ -88,8 +196,6 @@ struct ListUserOrganizationsResponseElement: Codable {
         case description
     }
 }
-
-
 
 struct GetAnOrganizationResponse: Codable {
     let login: String?
@@ -150,18 +256,6 @@ struct GetAnOrganizationResponse: Codable {
     }
 }
 
-struct Plan: Codable {
-    let name: String?
-    let space, privateRepos: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case name, space
-        case privateRepos = "private_repos"
-    }
-}
-
-
-
 struct EditAnOrganizationResponse: Codable {
     let login: String?
     let id: Int?
@@ -221,18 +315,6 @@ struct EditAnOrganizationResponse: Codable {
     }
 }
 
-struct Plan: Codable {
-    let name: String?
-    let space, privateRepos: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case name, space
-        case privateRepos = "private_repos"
-    }
-}
-
-
-
 typealias ListBlockedUsersResponse = [ListBlockedUsersResponseElement]
 
 struct ListBlockedUsersResponseElement: Codable {
@@ -270,22 +352,14 @@ struct ListBlockedUsersResponseElement: Codable {
     }
 }
 
-
-
 struct CheckWhetherAUserIsBlockedFromAnOrganizationResponse: Codable {
 }
-
-
 
 struct BlockAUserResponse: Codable {
 }
 
-
-
 struct UnblockAUserResponse: Codable {
 }
-
-
 
 typealias MembersListResponse = [MembersListResponseElement]
 
@@ -324,12 +398,8 @@ struct MembersListResponseElement: Codable {
     }
 }
 
-
-
 struct RemoveAMemberResponse: Codable {
 }
-
-
 
 typealias PublicMembersListResponse = [PublicMembersListResponseElement]
 
@@ -368,22 +438,14 @@ struct PublicMembersListResponseElement: Codable {
     }
 }
 
-
-
 struct PublicizeAUserSMembershipResponse: Codable {
 }
-
-
 
 struct ConcealAUserSMembershipResponse: Codable {
 }
 
-
-
 struct RemoveOrganizationMembershipResponse: Codable {
 }
-
-
 
 typealias ListOrganizationInvitationTeamsResponse = [ListOrganizationInvitationTeamsResponseElement]
 
@@ -406,35 +468,6 @@ struct ListOrganizationInvitationTeamsResponseElement: Codable {
     }
 }
 
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 typealias ListPendingOrganizationInvitationsResponse = [ListPendingOrganizationInvitationsResponseElement]
 
 struct ListPendingOrganizationInvitationsResponseElement: Codable {
@@ -454,43 +487,6 @@ struct ListPendingOrganizationInvitationsResponseElement: Codable {
     }
 }
 
-struct Inviter: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct CreateOrganizationInvitationResponse: Codable {
     let id: Int?
     let login, email, role: String?
@@ -508,43 +504,6 @@ struct CreateOrganizationInvitationResponse: Codable {
     }
 }
 
-struct Inviter: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 typealias ListYourOrganizationMembershipsResponse = [ListYourOrganizationMembershipsResponseElement]
 
 struct ListYourOrganizationMembershipsResponseElement: Codable {
@@ -561,68 +520,6 @@ struct ListYourOrganizationMembershipsResponseElement: Codable {
     }
 }
 
-struct Organization: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let url, reposURL, eventsURL, hooksURL: String?
-    let issuesURL: String?
-    let membersURL, publicMembersURL: String?
-    let avatarURL: String?
-    let description: String?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case url
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case hooksURL = "hooks_url"
-        case issuesURL = "issues_url"
-        case membersURL = "members_url"
-        case publicMembersURL = "public_members_url"
-        case avatarURL = "avatar_url"
-        case description
-    }
-}
-
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct GetYourOrganizationMembershipResponse: Codable {
     let url: String?
     let state, role: String?
@@ -637,68 +534,6 @@ struct GetYourOrganizationMembershipResponse: Codable {
     }
 }
 
-struct Organization: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let url, reposURL, eventsURL, hooksURL: String?
-    let issuesURL: String?
-    let membersURL, publicMembersURL: String?
-    let avatarURL: String?
-    let description: String?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case url
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case hooksURL = "hooks_url"
-        case issuesURL = "issues_url"
-        case membersURL = "members_url"
-        case publicMembersURL = "public_members_url"
-        case avatarURL = "avatar_url"
-        case description
-    }
-}
-
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct EditYourOrganizationMembershipResponse: Codable {
     let url: String?
     let state, role: String?
@@ -712,68 +547,6 @@ struct EditYourOrganizationMembershipResponse: Codable {
         case organization, user
     }
 }
-
-struct Organization: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let url, reposURL, eventsURL, hooksURL: String?
-    let issuesURL: String?
-    let membersURL, publicMembersURL: String?
-    let avatarURL: String?
-    let description: String?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case url
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case hooksURL = "hooks_url"
-        case issuesURL = "issues_url"
-        case membersURL = "members_url"
-        case publicMembersURL = "public_members_url"
-        case avatarURL = "avatar_url"
-        case description
-    }
-}
-
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 typealias ListOutsideCollaboratorsResponse = [ListOutsideCollaboratorsResponseElement]
 
@@ -812,17 +585,11 @@ struct ListOutsideCollaboratorsResponseElement: Codable {
     }
 }
 
-
-
 struct RemoveOutsideCollaboratorResponse: Codable {
 }
 
-
-
 struct ConvertMemberToOutsideCollaboratorResponse: Codable {
 }
-
-
 
 typealias ListHooksResponse = [ListHooksResponseElement]
 
@@ -844,18 +611,6 @@ struct ListHooksResponseElement: Codable {
     }
 }
 
-struct Config: Codable {
-    let url: String?
-    let contentType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case contentType = "content_type"
-    }
-}
-
-
-
 struct GetSingleHookResponse: Codable {
     let id: Int?
     let url, pingURL: String?
@@ -873,18 +628,6 @@ struct GetSingleHookResponse: Codable {
         case createdAt = "created_at"
     }
 }
-
-struct Config: Codable {
-    let url: String?
-    let contentType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case contentType = "content_type"
-    }
-}
-
-
 
 struct CreateAHookResponse: Codable {
     let id: Int?
@@ -904,18 +647,6 @@ struct CreateAHookResponse: Codable {
     }
 }
 
-struct Config: Codable {
-    let url: String?
-    let contentType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case contentType = "content_type"
-    }
-}
-
-
-
 struct EditAHookResponse: Codable {
     let id: Int?
     let url, pingURL: String?
@@ -934,28 +665,12 @@ struct EditAHookResponse: Codable {
     }
 }
 
-struct Config: Codable {
-    let url: String?
-    let contentType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case contentType = "content_type"
-    }
-}
-
-
-
 struct PingAHookResponse: Codable {
 }
-
-
 
 struct DeleteAHookResponse: Codable {
 }
 
-
-    
       // https://developer.github.com/v3/orgs/#list-your-organizations
       /// List organizations for the authenticated user.
 ///
@@ -963,7 +678,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///This only lists organizations that your authorization allows you to operate on in some way (e.g., you can list teams with `read:org` scope, you can publicize your organization membership with `user` scope, etc.). Therefore, this API requires at least `user` or `read:org` scope. OAuth requests with insufficient scope receive a `403 Forbidden` response.
       func listForAuthenticatedUser() -> Response<ListYourOrganizationsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -975,14 +690,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/#list-all-organizations
       /// Lists all organizations, in the order that they were created on GitHub.
 ///
 ///**Note:** Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://developer.github.com/v3/#link-header) to get the URL for the next page of organizations.
       func list() -> Response<ListAllOrganizationsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -994,14 +708,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/#list-user-organizations
       /// List [public organization memberships](https://help.github.com/articles/publicizing-or-concealing-organization-membership) for the specified user.
 ///
 ///This method only lists _public_ memberships, regardless of authentication. If you need to fetch all of the organization memberships (public and private) for the authenticated user, use the [List your organizations](#list-your-organizations) API instead.
       func listForUser() -> Response<ListUserOrganizationsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1013,12 +726,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/#get-an-organization
       /// To see many of the organization response values, you need to be an authenticated organization owner with the `admin:org` scope. When the value of `two_factor_requirement_enabled` is `true`, the organization requires all members, billing managers, and outside collaborators to enable [two-factor authentication](https://help.github.com/articles/securing-your-account-with-two-factor-authentication-2fa/).
       func get() -> Response<GetAnOrganizationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1030,7 +742,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/#edit-an-organization
       /// **Note:** The new `members_allowed_repository_creation_type` replaces the functionality of `members_can_create_repositories`.
@@ -1041,7 +752,7 @@ struct DeleteAHookResponse: Codable {
 ///*   Setting `members_allowed_repository_creation_type` to `none` sets `members_can_create_repositories` to `false`.
 ///*   If you omit `members_allowed_repository_creation_type`, `members_can_create_repositories` is not modified.
       func edit() -> Response<EditAnOrganizationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1053,12 +764,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/blocking/#list-blocked-users
       /// List the users blocked by an organization.
       func listBlockedUsers() -> Response<ListBlockedUsersResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1070,14 +780,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/blocking/#check-whether-a-user-is-blocked-from-an-organization
       /// If the user is blocked:
 ///
 ///If the user is not blocked:
       func checkBlockedUser() -> Response<CheckWhetherAUserIsBlockedFromAnOrganizationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1089,12 +798,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/blocking/#block-a-user
       /// 
       func blockUser() -> Response<BlockAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1106,12 +814,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/blocking/#unblock-a-user
       /// 
       func unblockUser() -> Response<UnblockAUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1123,14 +830,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#members-list
       /// List all users who are members of an organization. If the authenticated user is also a member of this organization then both concealed and public members will be returned.
 ///
 ///
       func listMembers() -> Response<MembersListResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1142,12 +848,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#remove-a-member
       /// Removing a user from this list will remove them from all teams and they will no longer have any access to the organization's repositories.
       func removeMember() -> Response<RemoveAMemberResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1159,12 +864,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#public-members-list
       /// Members of an organization can choose to have their membership publicized or not.
       func listPublicMembers() -> Response<PublicMembersListResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1176,14 +880,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#publicize-a-users-membership
       /// The user can publicize their own membership. (A user cannot publicize the membership for another user.)
 ///
 ///Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
       func publicizeMembership() -> Response<PublicizeAUser'SMembershipResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1195,12 +898,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#conceal-a-users-membership
       /// 
       func concealMembership() -> Response<ConcealAUser'SMembershipResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1212,14 +914,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#remove-organization-membership
       /// In order to remove a user's membership with an organization, the authenticated user must be an organization owner.
 ///
 ///If the specified user is an active member of the organization, this will remove them from the organization. If the specified user has been invited to the organization, this will cancel their invitation. The specified user will receive an email notification in both cases.
       func removeMembership() -> Response<RemoveOrganizationMembershipResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1231,12 +932,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#list-organization-invitation-teams
       /// List all teams associated with an invitation. In order to see invitations in an organization, the authenticated user must be an organization owner.
       func listInvitationTeams() -> Response<ListOrganizationInvitationTeamsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1248,12 +948,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#list-pending-organization-invitations
       /// The return hash contains a `role` field which refers to the Organization Invitation role and will be one of the following values: `direct_member`, `admin`, `billing_manager`, `hiring_manager`, or `reinstate`. If the invitee is not a GitHub member, the `login` field in the return hash will be `null`.
       func listPendingInvitations() -> Response<ListPendingOrganizationInvitationsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1265,14 +964,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#create-organization-invitation
       /// Invite people to an organization by using their GitHub user ID or their email address. In order to create invitations in an organization, the authenticated user must be an organization owner.
 ///
 ///This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
       func createInvitation() -> Response<CreateOrganizationInvitationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1284,12 +982,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#list-your-organization-memberships
       /// 
       func listMemberships() -> Response<ListYourOrganizationMembershipsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1301,12 +998,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#get-your-organization-membership
       /// 
       func getMembershipForAuthenticatedUser() -> Response<GetYourOrganizationMembershipResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1318,12 +1014,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/members/#edit-your-organization-membership
       /// 
       func editMembership() -> Response<EditYourOrganizationMembershipResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1335,14 +1030,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/outside_collaborators/#list-outside-collaborators
       /// List all users who are outside collaborators of an organization.
 ///
 ///
       func listOutsideCollaborators() -> Response<ListOutsideCollaboratorsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1354,12 +1048,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/outside_collaborators/#remove-outside-collaborator
       /// Removing a user from this list will remove them from all the organization's repositories.
       func removeOutsideCollaborator() -> Response<RemoveOutsideCollaboratorResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1371,12 +1064,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/outside_collaborators/#convert-member-to-outside-collaborator
       /// When an organization member is converted to an outside collaborator, they'll only have access to the repositories that their current team membership allows. The user will no longer be a member of the organization. For more information, see "[Converting an organization member to an outside collaborator](https://help.github.com/articles/converting-an-organization-member-to-an-outside-collaborator/)".
       func convertMemberToOutsideCollaborator() -> Response<ConvertMemberToOutsideCollaboratorResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1388,12 +1080,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/hooks/#list-hooks
       /// 
       func listHooks() -> Response<ListHooksResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1405,12 +1096,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/hooks/#get-single-hook
       /// 
       func getHook() -> Response<GetSingleHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1422,12 +1112,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/hooks/#create-a-hook
       /// Here's how you can create a hook that posts payloads in JSON format:
       func createHook() -> Response<CreateAHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1439,12 +1128,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/hooks/#edit-a-hook
       /// 
       func editHook() -> Response<EditAHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1456,12 +1144,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/hooks/#ping-a-hook
       /// This will trigger a [ping event](https://developer.github.com/webhooks/#ping-event) to be sent to the hook.
       func pingHook() -> Response<PingAHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1473,12 +1160,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/orgs/hooks/#delete-a-hook
       /// 
       func deleteHook() -> Response<DeleteAHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -1490,7 +1176,7 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
+
   }
 
   var orgs: OctoDog.Orgs {

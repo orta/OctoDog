@@ -2,13 +2,24 @@
 import Foundation
 
 extension OctoDog {
-  struct Search {
-    
+    struct Search {
+        // Generated Responses
 
-    
-  }
+        struct // Auto-generated at 2019/1/12
+        import Foundation
 
-  var search: OctoDog.Search {
-    return OctoDog.Search()
-  }
+        extension OctoDog {
+            struct Search {
+                // Generated Responses
+            }
+
+            var search: OctoDog.Search {
+                return OctoDog.Search()
+            }
+        }
+    }
+
+    var search: OctoDog.Search {
+        return OctoDog.Search()
+    }
 }

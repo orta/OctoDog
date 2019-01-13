@@ -3,7 +3,410 @@ import Foundation
 
 extension OctoDog {
   struct Repos {
-    
+
+// Generated Responses
+
+struct Config: Codable {
+    let url: String?
+    let contentType: String?
+
+    enum CodingKeys: String, CodingKey {
+        case url
+        case contentType = "content_type"
+    }
+}
+struct Uploader: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct Asset: Codable {
+    let url: String?
+    let browserDownloadURL: String?
+    let id: Int?
+    let nodeID, name, label, state: String?
+    let contentType: String?
+    let size, downloadCount: Int?
+    let createdAt, updatedAt: Date?
+    let uploader: Author?
+
+    enum CodingKeys: String, CodingKey {
+        case url
+        case browserDownloadURL = "browser_download_url"
+        case id
+        case nodeID = "node_id"
+        case name, label, state
+        case contentType = "content_type"
+        case size
+        case downloadCount = "download_count"
+        case createdAt = "created_at"
+        case updatedAt = "updated_at"
+        case uploader
+    }
+}
+struct Invitee: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct Payload: Codable {
+    let deploy: String?
+}
+struct Creator: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct Content: Codable {
+    let name, path, sha: String?
+    let size: Int?
+    let url, htmlURL: String?
+    let gitURL: String?
+    let downloadURL: String?
+    let type: String?
+    let links: Links?
+
+    enum CodingKeys: String, CodingKey {
+        case name, path, sha, size, url
+        case htmlURL = "html_url"
+        case gitURL = "git_url"
+        case downloadURL = "download_url"
+        case type
+        case links = "_links"
+    }
+}
+struct Parent: Codable {
+    let url, htmlURL: String?
+    let sha: String?
+
+    enum CodingKeys: String, CodingKey {
+        case url
+        case htmlURL = "html_url"
+        case sha
+    }
+}
+struct Author: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct CommitAuthor: Codable {
+    let name, email: String?
+    let date: Date?
+}
+struct User: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct Team: Codable {
+    let id: Int?
+    let nodeID: String?
+    let url: String?
+    let name, slug, description, privacy: String?
+    let permission, membersURL: String?
+    let repositoriesURL: String?
+    let parent: JSONNull?
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case nodeID = "node_id"
+        case url, name, slug, description, privacy, permission
+        case membersURL = "members_url"
+        case repositoriesURL = "repositories_url"
+        case parent
+    }
+}
+struct Restrictions: Codable {
+    let url, usersURL, teamsURL: String?
+    let users: [User]?
+    let teams: [Team]?
+
+    enum CodingKeys: String, CodingKey {
+        case url
+        case usersURL = "users_url"
+        case teamsURL = "teams_url"
+        case users, teams
+    }
+}
+struct RequiredPullRequestReviews: Codable {
+    let url: String?
+    let dismissalRestrictions: Restrictions?
+    let dismissStaleReviews, requireCodeOwnerReviews: Bool?
+    let requiredApprovingReviewCount: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case url
+        case dismissalRestrictions = "dismissal_restrictions"
+        case dismissStaleReviews = "dismiss_stale_reviews"
+        case requireCodeOwnerReviews = "require_code_owner_reviews"
+        case requiredApprovingReviewCount = "required_approving_review_count"
+    }
+}
+struct EnforceAdmins: Codable {
+    let url: String?
+    let enabled: Bool?
+}
+struct Links: Codable {
+    let linksSelf: String?
+    let git: String?
+    let html: String?
+
+    enum CodingKeys: String, CodingKey {
+        case linksSelf = "self"
+        case git, html
+    }
+}
+struct Verification: Codable {
+    let verified: Bool?
+    let reason: String?
+    let signature, payload: JSONNull?
+}
+struct RequiredStatusChecks: Codable {
+    let url: String?
+    let strict: Bool?
+    let contexts: [String]?
+    let contextsURL: String?
+
+    enum CodingKeys: String, CodingKey {
+        case url, strict, contexts
+        case contextsURL = "contexts_url"
+    }
+}
+struct Protection: Codable {
+    let enabled: Bool?
+    let requiredStatusChecks: RequiredStatusChecks?
+
+    enum CodingKeys: String, CodingKey {
+        case enabled
+        case requiredStatusChecks = "required_status_checks"
+    }
+}
+struct Organization: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct Owner: Codable {
+    let login: String?
+    let id: Int?
+    let nodeID: String?
+    let avatarURL: String?
+    let gravatarID: String?
+    let url, htmlURL, followersURL: String?
+    let followingURL, gistsURL, starredURL: String?
+    let subscriptionsURL, organizationsURL, reposURL: String?
+    let eventsURL: String?
+    let receivedEventsURL: String?
+    let type: String?
+    let siteAdmin: Bool?
+
+    enum CodingKeys: String, CodingKey {
+        case login, id
+        case nodeID = "node_id"
+        case avatarURL = "avatar_url"
+        case gravatarID = "gravatar_id"
+        case url
+        case htmlURL = "html_url"
+        case followersURL = "followers_url"
+        case followingURL = "following_url"
+        case gistsURL = "gists_url"
+        case starredURL = "starred_url"
+        case subscriptionsURL = "subscriptions_url"
+        case organizationsURL = "organizations_url"
+        case reposURL = "repos_url"
+        case eventsURL = "events_url"
+        case receivedEventsURL = "received_events_url"
+        case type
+        case siteAdmin = "site_admin"
+    }
+}
+struct License: Codable {
+    let key, name, spdxID: String?
+    let url: String?
+    let nodeID: String?
+
+    enum CodingKeys: String, CodingKey {
+        case key, name
+        case spdxID = "spdx_id"
+        case url
+        case nodeID = "node_id"
+    }
+}
 typealias ListOrganizationRepositoriesResponse = [ListOrganizationRepositoriesResponseElement]
 
 struct ListOrganizationRepositoriesResponseElement: Codable {
@@ -120,87 +523,6 @@ struct ListOrganizationRepositoriesResponseElement: Codable {
     }
 }
 
-struct License: Codable {
-    let key, name, spdxID: String?
-    let url: String?
-    let nodeID: String?
-
-    enum CodingKeys: String, CodingKey {
-        case key, name
-        case spdxID = "spdx_id"
-        case url
-        case nodeID = "node_id"
-    }
-}
-
-struct Owner: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Permissions: Codable {
-    let admin, push, pull: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 typealias ListAllPublicRepositoriesResponse = [ListAllPublicRepositoriesResponseElement]
 
 struct ListAllPublicRepositoriesResponseElement: Codable {
@@ -276,43 +598,6 @@ struct ListAllPublicRepositoriesResponseElement: Codable {
         case treesURL = "trees_url"
     }
 }
-
-struct Owner: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 struct CreateANewRepositoryForTheAuthenticatedUserResponse: Codable {
     let id: Int?
@@ -430,74 +715,6 @@ struct CreateANewRepositoryForTheAuthenticatedUserResponse: Codable {
     }
 }
 
-struct Owner: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Permissions: Codable {
-    let admin, push, pull: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct CreateANewRepositoryInThisOrganizationResponse: Codable {
     let id: Int?
     let nodeID, name, fullName: String?
@@ -613,74 +830,6 @@ struct CreateANewRepositoryInThisOrganizationResponse: Codable {
         case networkCount = "network_count"
     }
 }
-
-struct Owner: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Permissions: Codable {
-    let admin, push, pull: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
 
 class GetResponse: Codable {
     let id: Int?
@@ -884,87 +1033,6 @@ class GetResponse: Codable {
     }
 }
 
-struct License: Codable {
-    let key, name, spdxID: String?
-    let url: String?
-    let nodeID: String?
-
-    enum CodingKeys: String, CodingKey {
-        case key, name
-        case spdxID = "spdx_id"
-        case url
-        case nodeID = "node_id"
-    }
-}
-
-struct Organization: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Permissions: Codable {
-    let admin, push, pull: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 class EditResponse: Codable {
     let id: Int?
     let nodeID, name, fullName: String?
@@ -1165,85 +1233,13 @@ class EditResponse: Codable {
     }
 }
 
-struct Organization: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Permissions: Codable {
-    let admin, push, pull: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct ListAllTopicsForARepositoryResponse: Codable {
     let names: [String]?
 }
 
-
-
 struct ReplaceAllTopicsForARepositoryResponse: Codable {
     let names: [String]?
 }
-
-
 
 struct ListLanguagesResponse: Codable {
     let c, python: Int?
@@ -1253,8 +1249,6 @@ struct ListLanguagesResponse: Codable {
         case python = "Python"
     }
 }
-
-
 
 typealias ListTeamsResponse = [ListTeamsResponseElement]
 
@@ -1277,35 +1271,6 @@ struct ListTeamsResponseElement: Codable {
     }
 }
 
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 typealias ListTagsResponse = [ListTagsResponseElement]
 
 struct ListTagsResponseElement: Codable {
@@ -1320,17 +1285,8 @@ struct ListTagsResponseElement: Codable {
     }
 }
 
-struct Commit: Codable {
-    let sha: String?
-    let url: String?
-}
-
-
-
 struct DeleteARepositoryResponse: Codable {
 }
-
-
 
 struct TransferARepositoryResponse: Codable {
     let id: Int?
@@ -1448,74 +1404,6 @@ struct TransferARepositoryResponse: Codable {
     }
 }
 
-struct Owner: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Permissions: Codable {
-    let admin, push, pull: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 typealias ListBranchesResponse = [ListBranchesResponseElement]
 
 struct ListBranchesResponseElement: Codable {
@@ -1530,33 +1418,6 @@ struct ListBranchesResponseElement: Codable {
         case protectionURL = "protection_url"
     }
 }
-
-struct Commit: Codable {
-    let sha: String?
-    let url: String?
-}
-
-struct Protection: Codable {
-    let enabled: Bool?
-    let requiredStatusChecks: RequiredStatusChecks?
-
-    enum CodingKeys: String, CodingKey {
-        case enabled
-        case requiredStatusChecks = "required_status_checks"
-    }
-}
-
-struct RequiredStatusChecks: Codable {
-    let enforcementLevel: String?
-    let contexts: [String]?
-
-    enum CodingKeys: String, CodingKey {
-        case enforcementLevel = "enforcement_level"
-        case contexts
-    }
-}
-
-
 
 struct GetBranchResponse: Codable {
     let name: String?
@@ -1617,75 +1478,6 @@ struct FluffyAuthor: Codable {
     let email: String?
 }
 
-struct Tree: Codable {
-    let sha: String?
-    let url: String?
-}
-
-struct Verification: Codable {
-    let verified: Bool?
-    let reason: String?
-    let signature, payload: JSONNull?
-}
-
-struct Links: Codable {
-    let html, linksSelf: String?
-
-    enum CodingKeys: String, CodingKey {
-        case html
-        case linksSelf = "self"
-    }
-}
-
-struct Protection: Codable {
-    let enabled: Bool?
-    let requiredStatusChecks: RequiredStatusChecks?
-
-    enum CodingKeys: String, CodingKey {
-        case enabled
-        case requiredStatusChecks = "required_status_checks"
-    }
-}
-
-struct RequiredStatusChecks: Codable {
-    let enforcementLevel: String?
-    let contexts: [String]?
-
-    enum CodingKeys: String, CodingKey {
-        case enforcementLevel = "enforcement_level"
-        case contexts
-    }
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct GetBranchProtectionResponse: Codable {
     let url: String?
     let requiredStatusChecks: RequiredStatusChecks?
@@ -1701,134 +1493,6 @@ struct GetBranchProtectionResponse: Codable {
         case restrictions
     }
 }
-
-struct EnforceAdmins: Codable {
-    let url: String?
-    let enabled: Bool?
-}
-
-struct RequiredPullRequestReviews: Codable {
-    let url: String?
-    let dismissalRestrictions: Restrictions?
-    let dismissStaleReviews, requireCodeOwnerReviews: Bool?
-    let requiredApprovingReviewCount: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case dismissalRestrictions = "dismissal_restrictions"
-        case dismissStaleReviews = "dismiss_stale_reviews"
-        case requireCodeOwnerReviews = "require_code_owner_reviews"
-        case requiredApprovingReviewCount = "required_approving_review_count"
-    }
-}
-
-struct Restrictions: Codable {
-    let url, usersURL, teamsURL: String?
-    let users: [User]?
-    let teams: [Team]?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case usersURL = "users_url"
-        case teamsURL = "teams_url"
-        case users, teams
-    }
-}
-
-struct Team: Codable {
-    let id: Int?
-    let nodeID: String?
-    let url: String?
-    let name, slug, description, privacy: String?
-    let permission, membersURL: String?
-    let repositoriesURL: String?
-    let parent: JSONNull?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case nodeID = "node_id"
-        case url, name, slug, description, privacy, permission
-        case membersURL = "members_url"
-        case repositoriesURL = "repositories_url"
-        case parent
-    }
-}
-
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct RequiredStatusChecks: Codable {
-    let url: String?
-    let strict: Bool?
-    let contexts: [String]?
-    let contextsURL: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url, strict, contexts
-        case contextsURL = "contexts_url"
-    }
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
 
 struct UpdateBranchProtectionResponse: Codable {
     let url: String?
@@ -1846,138 +1510,8 @@ struct UpdateBranchProtectionResponse: Codable {
     }
 }
 
-struct EnforceAdmins: Codable {
-    let url: String?
-    let enabled: Bool?
-}
-
-struct RequiredPullRequestReviews: Codable {
-    let url: String?
-    let dismissalRestrictions: Restrictions?
-    let dismissStaleReviews, requireCodeOwnerReviews: Bool?
-    let requiredApprovingReviewCount: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case dismissalRestrictions = "dismissal_restrictions"
-        case dismissStaleReviews = "dismiss_stale_reviews"
-        case requireCodeOwnerReviews = "require_code_owner_reviews"
-        case requiredApprovingReviewCount = "required_approving_review_count"
-    }
-}
-
-struct Restrictions: Codable {
-    let url, usersURL, teamsURL: String?
-    let users: [User]?
-    let teams: [Team]?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case usersURL = "users_url"
-        case teamsURL = "teams_url"
-        case users, teams
-    }
-}
-
-struct Team: Codable {
-    let id: Int?
-    let nodeID: String?
-    let url: String?
-    let name, slug, description, privacy: String?
-    let permission, membersURL: String?
-    let repositoriesURL: String?
-    let parent: JSONNull?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case nodeID = "node_id"
-        case url, name, slug, description, privacy, permission
-        case membersURL = "members_url"
-        case repositoriesURL = "repositories_url"
-        case parent
-    }
-}
-
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct RequiredStatusChecks: Codable {
-    let url: String?
-    let strict: Bool?
-    let contexts: [String]?
-    let contextsURL: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url, strict, contexts
-        case contextsURL = "contexts_url"
-    }
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct RemoveBranchProtectionResponse: Codable {
 }
-
-
 
 struct GetRequiredStatusChecksOfProtectedBranchResponse: Codable {
     let url: String?
@@ -1991,8 +1525,6 @@ struct GetRequiredStatusChecksOfProtectedBranchResponse: Codable {
     }
 }
 
-
-
 struct UpdateRequiredStatusChecksOfProtectedBranchResponse: Codable {
     let url: String?
     let strict: Bool?
@@ -2005,19 +1537,11 @@ struct UpdateRequiredStatusChecksOfProtectedBranchResponse: Codable {
     }
 }
 
-
-
 typealias ReplaceRequiredStatusChecksContextsOfProtectedBranchResponse = [String]
-
-
 
 typealias AddRequiredStatusChecksContextsOfProtectedBranchResponse = [String]
 
-
-
 typealias RemoveRequiredStatusChecksContextsOfProtectedBranchResponse = [String]
-
-
 
 struct UpdatePullRequestReviewEnforcementOfProtectedBranchResponse: Codable {
     let url: String?
@@ -2047,109 +1571,20 @@ struct DismissalRestrictions: Codable {
     }
 }
 
-struct Team: Codable {
-    let id: Int?
-    let nodeID: String?
-    let url: String?
-    let name, slug, description, privacy: String?
-    let permission, membersURL: String?
-    let repositoriesURL: String?
-    let parent: JSONNull?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case nodeID = "node_id"
-        case url, name, slug, description, privacy, permission
-        case membersURL = "members_url"
-        case repositoriesURL = "repositories_url"
-        case parent
-    }
-}
-
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct GetRequiredSignaturesOfProtectedBranchResponse: Codable {
     let url: String?
     let enabled: Bool?
 }
-
-
 
 struct AddRequiredSignaturesOfProtectedBranchResponse: Codable {
     let url: String?
     let enabled: Bool?
 }
 
-
-
 struct AddAdminEnforcementOfProtectedBranchResponse: Codable {
     let url: String?
     let enabled: Bool?
 }
-
-
 
 typealias ReplaceTeamRestrictionsOfProtectedBranchResponse = [ReplaceTeamRestrictionsOfProtectedBranchResponseElement]
 
@@ -2172,35 +1607,6 @@ struct ReplaceTeamRestrictionsOfProtectedBranchResponseElement: Codable {
     }
 }
 
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 typealias AddTeamRestrictionsOfProtectedBranchResponse = [AddTeamRestrictionsOfProtectedBranchResponseElement]
 
 struct AddTeamRestrictionsOfProtectedBranchResponseElement: Codable {
@@ -2222,35 +1628,6 @@ struct AddTeamRestrictionsOfProtectedBranchResponseElement: Codable {
     }
 }
 
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 typealias RemoveTeamRestrictionsOfProtectedBranchResponse = [RemoveTeamRestrictionsOfProtectedBranchResponseElement]
 
 struct RemoveTeamRestrictionsOfProtectedBranchResponseElement: Codable {
@@ -2271,35 +1648,6 @@ struct RemoveTeamRestrictionsOfProtectedBranchResponseElement: Codable {
         case parent
     }
 }
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
 
 typealias ReplaceUserRestrictionsOfProtectedBranchResponse = [ReplaceUserRestrictionsOfProtectedBranchResponseElement]
 
@@ -2338,8 +1686,6 @@ struct ReplaceUserRestrictionsOfProtectedBranchResponseElement: Codable {
     }
 }
 
-
-
 typealias AddUserRestrictionsOfProtectedBranchResponse = [AddUserRestrictionsOfProtectedBranchResponseElement]
 
 struct AddUserRestrictionsOfProtectedBranchResponseElement: Codable {
@@ -2377,8 +1723,6 @@ struct AddUserRestrictionsOfProtectedBranchResponseElement: Codable {
     }
 }
 
-
-
 typealias RemoveUserRestrictionsOfProtectedBranchResponse = [RemoveUserRestrictionsOfProtectedBranchResponseElement]
 
 struct RemoveUserRestrictionsOfProtectedBranchResponseElement: Codable {
@@ -2415,8 +1759,6 @@ struct RemoveUserRestrictionsOfProtectedBranchResponseElement: Codable {
         case siteAdmin = "site_admin"
     }
 }
-
-
 
 typealias ListCollaboratorsResponse = [ListCollaboratorsResponseElement]
 
@@ -2461,12 +1803,8 @@ struct Permissions: Codable {
     let pull, push, admin: Bool?
 }
 
-
-
 struct RemoveUserAsACollaboratorResponse: Codable {
 }
-
-
 
 typealias ListCommitCommentsForARepositoryResponse = [ListCommitCommentsForARepositoryResponseElement]
 
@@ -2491,43 +1829,6 @@ struct ListCommitCommentsForARepositoryResponseElement: Codable {
     }
 }
 
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 typealias ListCommentsForASingleCommitResponse = [ListCommentsForASingleCommitResponseElement]
 
 struct ListCommentsForASingleCommitResponseElement: Codable {
@@ -2551,43 +1852,6 @@ struct ListCommentsForASingleCommitResponseElement: Codable {
     }
 }
 
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct CreateACommitCommentResponse: Codable {
     let htmlURL, url: String?
     let id: Int?
@@ -2608,43 +1872,6 @@ struct CreateACommitCommentResponse: Codable {
         case updatedAt = "updated_at"
     }
 }
-
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 struct GetASingleCommitCommentResponse: Codable {
     let htmlURL, url: String?
@@ -2667,43 +1894,6 @@ struct GetASingleCommitCommentResponse: Codable {
     }
 }
 
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct UpdateACommitCommentResponse: Codable {
     let htmlURL, url: String?
     let id: Int?
@@ -2725,47 +1915,8 @@ struct UpdateACommitCommentResponse: Codable {
     }
 }
 
-struct User: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct DeleteACommitCommentResponse: Codable {
 }
-
-
 
 typealias ListCommitsOnARepositoryResponse = [ListCommitsOnARepositoryResponseElement]
 
@@ -2821,65 +1972,10 @@ struct ListCommitsOnARepositoryResponseAuthor: Codable {
     }
 }
 
-struct Commit: Codable {
-    let url: String?
-    let author, committer: CommitAuthor?
-    let message: String?
-    let tree: Tree?
-    let commentCount: Int?
-    let verification: Verification?
-
-    enum CodingKeys: String, CodingKey {
-        case url, author, committer, message, tree
-        case commentCount = "comment_count"
-        case verification
-    }
-}
-
-struct CommitAuthor: Codable {
-    let name, email: String?
-    let date: Date?
-}
-
 struct Tree: Codable {
     let url: String?
     let sha: String?
 }
-
-struct Verification: Codable {
-    let verified: Bool?
-    let reason: String?
-    let signature, payload: JSONNull?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
 
 struct GetASingleCommitResponse: Codable {
     let url: String?
@@ -2935,35 +2031,9 @@ struct GetASingleCommitResponseAuthor: Codable {
     }
 }
 
-struct Commit: Codable {
-    let url: String?
-    let author, committer: CommitAuthor?
-    let message: String?
-    let tree: Tree?
-    let commentCount: Int?
-    let verification: Verification?
-
-    enum CodingKeys: String, CodingKey {
-        case url, author, committer, message, tree
-        case commentCount = "comment_count"
-        case verification
-    }
-}
-
-struct CommitAuthor: Codable {
-    let name, email: String?
-    let date: Date?
-}
-
 struct Tree: Codable {
     let url: String?
     let sha: String?
-}
-
-struct Verification: Codable {
-    let verified: Bool?
-    let reason: String?
-    let signature, payload: JSONNull?
 }
 
 struct File: Codable {
@@ -2985,39 +2055,8 @@ struct Stats: Codable {
     let additions, deletions, total: Int?
 }
 
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct GetTheSHA1OfACommitReferenceResponse: Codable {
 }
-
-
 
 struct RetrieveCommunityProfileMetricsResponse: Codable {
     let healthPercentage: Int?
@@ -3070,8 +2109,6 @@ struct Contributing: Codable {
     }
 }
 
-
-
 struct GetTheREADMEResponse: Codable {
     let type, encoding: String?
     let size: Int?
@@ -3090,320 +2127,38 @@ struct GetTheREADMEResponse: Codable {
     }
 }
 
-struct Links: Codable {
-    let git: String?
-    let linksSelf, html: String?
-
-    enum CodingKeys: String, CodingKey {
-        case git
-        case linksSelf = "self"
-        case html
-    }
-}
-
-
-
 struct CreateAFileResponse: Codable {
     let content: Content?
     let commit: Commit?
-}
-
-struct Commit: Codable {
-    let sha, nodeID: String?
-    let url, htmlURL: String?
-    let author, committer: Author?
-    let message: String?
-    let tree: Tree?
-    let parents: [Parent]?
-    let verification: Verification?
-
-    enum CodingKeys: String, CodingKey {
-        case sha
-        case nodeID = "node_id"
-        case url
-        case htmlURL = "html_url"
-        case author, committer, message, tree, parents, verification
-    }
-}
-
-struct Author: Codable {
-    let date: Date?
-    let name, email: String?
-}
-
-struct Parent: Codable {
-    let url, htmlURL: String?
-    let sha: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case htmlURL = "html_url"
-        case sha
-    }
 }
 
 struct Tree: Codable {
     let url: String?
     let sha: String?
 }
-
-struct Verification: Codable {
-    let verified: Bool?
-    let reason: String?
-    let signature, payload: JSONNull?
-}
-
-struct Content: Codable {
-    let name, path, sha: String?
-    let size: Int?
-    let url, htmlURL: String?
-    let gitURL: String?
-    let downloadURL: String?
-    let type: String?
-    let links: Links?
-
-    enum CodingKeys: String, CodingKey {
-        case name, path, sha, size, url
-        case htmlURL = "html_url"
-        case gitURL = "git_url"
-        case downloadURL = "download_url"
-        case type
-        case links = "_links"
-    }
-}
-
-struct Links: Codable {
-    let linksSelf: String?
-    let git: String?
-    let html: String?
-
-    enum CodingKeys: String, CodingKey {
-        case linksSelf = "self"
-        case git, html
-    }
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
 
 struct UpdateAFileResponse: Codable {
     let content: Content?
     let commit: Commit?
 }
 
-struct Commit: Codable {
-    let sha, nodeID: String?
-    let url, htmlURL: String?
-    let author, committer: Author?
-    let message: String?
-    let tree: Tree?
-    let parents: [Parent]?
-    let verification: Verification?
-
-    enum CodingKeys: String, CodingKey {
-        case sha
-        case nodeID = "node_id"
-        case url
-        case htmlURL = "html_url"
-        case author, committer, message, tree, parents, verification
-    }
-}
-
-struct Author: Codable {
-    let date: Date?
-    let name, email: String?
-}
-
-struct Parent: Codable {
-    let url, htmlURL: String?
-    let sha: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case htmlURL = "html_url"
-        case sha
-    }
-}
-
 struct Tree: Codable {
     let url: String?
     let sha: String?
 }
-
-struct Verification: Codable {
-    let verified: Bool?
-    let reason: String?
-    let signature, payload: JSONNull?
-}
-
-struct Content: Codable {
-    let name, path, sha: String?
-    let size: Int?
-    let url, htmlURL: String?
-    let gitURL: String?
-    let downloadURL: String?
-    let type: String?
-    let links: Links?
-
-    enum CodingKeys: String, CodingKey {
-        case name, path, sha, size, url
-        case htmlURL = "html_url"
-        case gitURL = "git_url"
-        case downloadURL = "download_url"
-        case type
-        case links = "_links"
-    }
-}
-
-struct Links: Codable {
-    let linksSelf: String?
-    let git: String?
-    let html: String?
-
-    enum CodingKeys: String, CodingKey {
-        case linksSelf = "self"
-        case git, html
-    }
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
 
 struct DeleteAFileResponse: Codable {
     let content: JSONNull?
     let commit: Commit?
 }
 
-struct Commit: Codable {
-    let sha, nodeID: String?
-    let url, htmlURL: String?
-    let author, committer: Author?
-    let message: String?
-    let tree: Tree?
-    let parents: [Parent]?
-    let verification: Verification?
-
-    enum CodingKeys: String, CodingKey {
-        case sha
-        case nodeID = "node_id"
-        case url
-        case htmlURL = "html_url"
-        case author, committer, message, tree, parents, verification
-    }
-}
-
-struct Author: Codable {
-    let date: Date?
-    let name, email: String?
-}
-
-struct Parent: Codable {
-    let url, htmlURL: String?
-    let sha: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case htmlURL = "html_url"
-        case sha
-    }
-}
-
 struct Tree: Codable {
     let url: String?
     let sha: String?
 }
 
-struct Verification: Codable {
-    let verified: Bool?
-    let reason: String?
-    let signature, payload: JSONNull?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct GetArchiveLinkResponse: Codable {
 }
-
-
 
 typealias ListDeployKeysResponse = [ListDeployKeysResponseElement]
 
@@ -3423,8 +2178,6 @@ struct ListDeployKeysResponseElement: Codable {
     }
 }
 
-
-
 struct GetADeployKeyResponse: Codable {
     let id: Int?
     let key: String?
@@ -3440,8 +2193,6 @@ struct GetADeployKeyResponse: Codable {
         case readOnly = "read_only"
     }
 }
-
-
 
 struct AddANewDeployKeyResponse: Codable {
     let id: Int?
@@ -3459,12 +2210,8 @@ struct AddANewDeployKeyResponse: Codable {
     }
 }
 
-
-
 struct RemoveADeployKeyResponse: Codable {
 }
-
-
 
 typealias ListDeploymentsResponse = [ListDeploymentsResponseElement]
 
@@ -3494,47 +2241,6 @@ struct ListDeploymentsResponseElement: Codable {
     }
 }
 
-struct Creator: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Payload: Codable {
-    let deploy: String?
-}
-
-
-
 struct GetASingleDeploymentResponse: Codable {
     let url: String?
     let id: Int?
@@ -3560,47 +2266,6 @@ struct GetASingleDeploymentResponse: Codable {
         case productionEnvironment = "production_environment"
     }
 }
-
-struct Creator: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Payload: Codable {
-    let deploy: String?
-}
-
-
 
 typealias ListDeploymentStatusesResponse = [ListDeploymentStatusesResponseElement]
 
@@ -3630,43 +2295,6 @@ struct ListDeploymentStatusesResponseElement: Codable {
     }
 }
 
-struct Creator: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct GetASingleDeploymentStatusResponse: Codable {
     let url: String?
     let id: Int?
@@ -3692,43 +2320,6 @@ struct GetASingleDeploymentStatusResponse: Codable {
         case logURL = "log_url"
     }
 }
-
-struct Creator: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 struct CreateADeploymentStatusResponse: Codable {
     let url: String?
@@ -3756,43 +2347,6 @@ struct CreateADeploymentStatusResponse: Codable {
     }
 }
 
-struct Creator: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 typealias ListDownloadsForARepositoryResponse = [ListDownloadsForARepositoryResponseElement]
 
 struct ListDownloadsForARepositoryResponseElement: Codable {
@@ -3812,8 +2366,6 @@ struct ListDownloadsForARepositoryResponseElement: Codable {
     }
 }
 
-
-
 struct GetASingleDownloadResponse: Codable {
     let url: String?
     let htmlURL: String?
@@ -3831,12 +2383,8 @@ struct GetASingleDownloadResponse: Codable {
     }
 }
 
-
-
 struct DeleteADownloadResponse: Codable {
 }
-
-
 
 typealias ListForksResponse = [ListForksResponseElement]
 
@@ -3954,87 +2502,6 @@ struct ListForksResponseElement: Codable {
     }
 }
 
-struct License: Codable {
-    let key, name, spdxID: String?
-    let url: String?
-    let nodeID: String?
-
-    enum CodingKeys: String, CodingKey {
-        case key, name
-        case spdxID = "spdx_id"
-        case url
-        case nodeID = "node_id"
-    }
-}
-
-struct Owner: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Permissions: Codable {
-    let admin, push, pull: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 struct CreateAForkResponse: Codable {
     let id: Int?
     let nodeID, name, fullName: String?
@@ -4151,74 +2618,6 @@ struct CreateAForkResponse: Codable {
     }
 }
 
-struct Owner: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Permissions: Codable {
-    let admin, push, pull: Bool?
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-
-
 typealias ListInvitationsForARepositoryResponse = [ListInvitationsForARepositoryResponseElement]
 
 struct ListInvitationsForARepositoryResponseElement: Codable {
@@ -4237,121 +2636,8 @@ struct ListInvitationsForARepositoryResponseElement: Codable {
     }
 }
 
-struct Invitee: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Repository: Codable {
-    let id: Int?
-    let nodeID, name, fullName: String?
-    let owner: Invitee?
-    let repositoryPrivate: Bool?
-    let htmlURL: String?
-    let description: String?
-    let fork: Bool?
-    let url: String?
-    let archiveURL, assigneesURL, blobsURL, branchesURL: String?
-    let collaboratorsURL, commentsURL, commitsURL, compareURL: String?
-    let contentsURL: String?
-    let contributorsURL, deploymentsURL, downloadsURL, eventsURL: String?
-    let forksURL: String?
-    let gitCommitsURL, gitRefsURL, gitTagsURL, gitURL: String?
-    let issueCommentURL, issueEventsURL, issuesURL, keysURL: String?
-    let labelsURL: String?
-    let languagesURL, mergesURL: String?
-    let milestonesURL, notificationsURL, pullsURL, releasesURL: String?
-    let sshURL: String?
-    let stargazersURL: String?
-    let statusesURL: String?
-    let subscribersURL, subscriptionURL, tagsURL, teamsURL: String?
-    let treesURL: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case nodeID = "node_id"
-        case name
-        case fullName = "full_name"
-        case owner
-        case repositoryPrivate = "private"
-        case htmlURL = "html_url"
-        case description, fork, url
-        case archiveURL = "archive_url"
-        case assigneesURL = "assignees_url"
-        case blobsURL = "blobs_url"
-        case branchesURL = "branches_url"
-        case collaboratorsURL = "collaborators_url"
-        case commentsURL = "comments_url"
-        case commitsURL = "commits_url"
-        case compareURL = "compare_url"
-        case contentsURL = "contents_url"
-        case contributorsURL = "contributors_url"
-        case deploymentsURL = "deployments_url"
-        case downloadsURL = "downloads_url"
-        case eventsURL = "events_url"
-        case forksURL = "forks_url"
-        case gitCommitsURL = "git_commits_url"
-        case gitRefsURL = "git_refs_url"
-        case gitTagsURL = "git_tags_url"
-        case gitURL = "git_url"
-        case issueCommentURL = "issue_comment_url"
-        case issueEventsURL = "issue_events_url"
-        case issuesURL = "issues_url"
-        case keysURL = "keys_url"
-        case labelsURL = "labels_url"
-        case languagesURL = "languages_url"
-        case mergesURL = "merges_url"
-        case milestonesURL = "milestones_url"
-        case notificationsURL = "notifications_url"
-        case pullsURL = "pulls_url"
-        case releasesURL = "releases_url"
-        case sshURL = "ssh_url"
-        case stargazersURL = "stargazers_url"
-        case statusesURL = "statuses_url"
-        case subscribersURL = "subscribers_url"
-        case subscriptionURL = "subscription_url"
-        case tagsURL = "tags_url"
-        case teamsURL = "teams_url"
-        case treesURL = "trees_url"
-    }
-}
-
-
-
 struct DeleteARepositoryInvitationResponse: Codable {
 }
-
-
 
 struct UpdateARepositoryInvitationResponse: Codable {
     let id: Int?
@@ -4368,117 +2654,6 @@ struct UpdateARepositoryInvitationResponse: Codable {
         case htmlURL = "html_url"
     }
 }
-
-struct Invitee: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Repository: Codable {
-    let id: Int?
-    let nodeID, name, fullName: String?
-    let owner: Invitee?
-    let repositoryPrivate: Bool?
-    let htmlURL: String?
-    let description: String?
-    let fork: Bool?
-    let url: String?
-    let archiveURL, assigneesURL, blobsURL, branchesURL: String?
-    let collaboratorsURL, commentsURL, commitsURL, compareURL: String?
-    let contentsURL: String?
-    let contributorsURL, deploymentsURL, downloadsURL, eventsURL: String?
-    let forksURL: String?
-    let gitCommitsURL, gitRefsURL, gitTagsURL, gitURL: String?
-    let issueCommentURL, issueEventsURL, issuesURL, keysURL: String?
-    let labelsURL: String?
-    let languagesURL, mergesURL: String?
-    let milestonesURL, notificationsURL, pullsURL, releasesURL: String?
-    let sshURL: String?
-    let stargazersURL: String?
-    let statusesURL: String?
-    let subscribersURL, subscriptionURL, tagsURL, teamsURL: String?
-    let treesURL: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case nodeID = "node_id"
-        case name
-        case fullName = "full_name"
-        case owner
-        case repositoryPrivate = "private"
-        case htmlURL = "html_url"
-        case description, fork, url
-        case archiveURL = "archive_url"
-        case assigneesURL = "assignees_url"
-        case blobsURL = "blobs_url"
-        case branchesURL = "branches_url"
-        case collaboratorsURL = "collaborators_url"
-        case commentsURL = "comments_url"
-        case commitsURL = "commits_url"
-        case compareURL = "compare_url"
-        case contentsURL = "contents_url"
-        case contributorsURL = "contributors_url"
-        case deploymentsURL = "deployments_url"
-        case downloadsURL = "downloads_url"
-        case eventsURL = "events_url"
-        case forksURL = "forks_url"
-        case gitCommitsURL = "git_commits_url"
-        case gitRefsURL = "git_refs_url"
-        case gitTagsURL = "git_tags_url"
-        case gitURL = "git_url"
-        case issueCommentURL = "issue_comment_url"
-        case issueEventsURL = "issue_events_url"
-        case issuesURL = "issues_url"
-        case keysURL = "keys_url"
-        case labelsURL = "labels_url"
-        case languagesURL = "languages_url"
-        case mergesURL = "merges_url"
-        case milestonesURL = "milestones_url"
-        case notificationsURL = "notifications_url"
-        case pullsURL = "pulls_url"
-        case releasesURL = "releases_url"
-        case sshURL = "ssh_url"
-        case stargazersURL = "stargazers_url"
-        case statusesURL = "statuses_url"
-        case subscribersURL = "subscribers_url"
-        case subscriptionURL = "subscription_url"
-        case tagsURL = "tags_url"
-        case teamsURL = "teams_url"
-        case treesURL = "trees_url"
-    }
-}
-
-
 
 typealias ListAUserSRepositoryInvitationsResponse = [ListAUserSRepositoryInvitationsResponseElement]
 
@@ -4498,126 +2673,11 @@ struct ListAUserSRepositoryInvitationsResponseElement: Codable {
     }
 }
 
-struct Invitee: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-struct Repository: Codable {
-    let id: Int?
-    let nodeID, name, fullName: String?
-    let owner: Invitee?
-    let repositoryPrivate: Bool?
-    let htmlURL: String?
-    let description: String?
-    let fork: Bool?
-    let url: String?
-    let archiveURL, assigneesURL, blobsURL, branchesURL: String?
-    let collaboratorsURL, commentsURL, commitsURL, compareURL: String?
-    let contentsURL: String?
-    let contributorsURL, deploymentsURL, downloadsURL, eventsURL: String?
-    let forksURL: String?
-    let gitCommitsURL, gitRefsURL, gitTagsURL, gitURL: String?
-    let issueCommentURL, issueEventsURL, issuesURL, keysURL: String?
-    let labelsURL: String?
-    let languagesURL, mergesURL: String?
-    let milestonesURL, notificationsURL, pullsURL, releasesURL: String?
-    let sshURL: String?
-    let stargazersURL: String?
-    let statusesURL: String?
-    let subscribersURL, subscriptionURL, tagsURL, teamsURL: String?
-    let treesURL: String?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case nodeID = "node_id"
-        case name
-        case fullName = "full_name"
-        case owner
-        case repositoryPrivate = "private"
-        case htmlURL = "html_url"
-        case description, fork, url
-        case archiveURL = "archive_url"
-        case assigneesURL = "assignees_url"
-        case blobsURL = "blobs_url"
-        case branchesURL = "branches_url"
-        case collaboratorsURL = "collaborators_url"
-        case commentsURL = "comments_url"
-        case commitsURL = "commits_url"
-        case compareURL = "compare_url"
-        case contentsURL = "contents_url"
-        case contributorsURL = "contributors_url"
-        case deploymentsURL = "deployments_url"
-        case downloadsURL = "downloads_url"
-        case eventsURL = "events_url"
-        case forksURL = "forks_url"
-        case gitCommitsURL = "git_commits_url"
-        case gitRefsURL = "git_refs_url"
-        case gitTagsURL = "git_tags_url"
-        case gitURL = "git_url"
-        case issueCommentURL = "issue_comment_url"
-        case issueEventsURL = "issue_events_url"
-        case issuesURL = "issues_url"
-        case keysURL = "keys_url"
-        case labelsURL = "labels_url"
-        case languagesURL = "languages_url"
-        case mergesURL = "merges_url"
-        case milestonesURL = "milestones_url"
-        case notificationsURL = "notifications_url"
-        case pullsURL = "pulls_url"
-        case releasesURL = "releases_url"
-        case sshURL = "ssh_url"
-        case stargazersURL = "stargazers_url"
-        case statusesURL = "statuses_url"
-        case subscribersURL = "subscribers_url"
-        case subscriptionURL = "subscription_url"
-        case tagsURL = "tags_url"
-        case teamsURL = "teams_url"
-        case treesURL = "trees_url"
-    }
-}
-
-
-
 struct AcceptARepositoryInvitationResponse: Codable {
 }
 
-
-
 struct DeclineARepositoryInvitationResponse: Codable {
 }
-
-
 
 struct GetInformationAboutAPagesSiteResponse: Codable {
     let url: String?
@@ -4638,19 +2698,13 @@ struct Source: Codable {
     let branch, directory: String?
 }
 
-
-
 struct UpdateInformationAboutAPagesSiteResponse: Codable {
 }
-
-
 
 struct RequestAPageBuildResponse: Codable {
     let url: String?
     let status: String?
 }
-
-
 
 typealias ListReleasesForARepositoryResponse = [ListReleasesForARepositoryResponseElement]
 
@@ -4686,68 +2740,6 @@ struct ListReleasesForARepositoryResponseElement: Codable {
     }
 }
 
-struct Asset: Codable {
-    let url: String?
-    let browserDownloadURL: String?
-    let id: Int?
-    let nodeID, name, label, state: String?
-    let contentType: String?
-    let size, downloadCount: Int?
-    let createdAt, updatedAt: Date?
-    let uploader: Author?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case browserDownloadURL = "browser_download_url"
-        case id
-        case nodeID = "node_id"
-        case name, label, state
-        case contentType = "content_type"
-        case size
-        case downloadCount = "download_count"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case uploader
-    }
-}
-
-struct Author: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct GetASingleReleaseResponse: Codable {
     let url: String?
     let htmlURL: String?
@@ -4779,68 +2771,6 @@ struct GetASingleReleaseResponse: Codable {
         case author, assets
     }
 }
-
-struct Asset: Codable {
-    let url: String?
-    let browserDownloadURL: String?
-    let id: Int?
-    let nodeID, name, label, state: String?
-    let contentType: String?
-    let size, downloadCount: Int?
-    let createdAt, updatedAt: Date?
-    let uploader: Author?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case browserDownloadURL = "browser_download_url"
-        case id
-        case nodeID = "node_id"
-        case name, label, state
-        case contentType = "content_type"
-        case size
-        case downloadCount = "download_count"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case uploader
-    }
-}
-
-struct Author: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 struct GetTheLatestReleaseResponse: Codable {
     let url: String?
@@ -4874,68 +2804,6 @@ struct GetTheLatestReleaseResponse: Codable {
     }
 }
 
-struct Asset: Codable {
-    let url: String?
-    let browserDownloadURL: String?
-    let id: Int?
-    let nodeID, name, label, state: String?
-    let contentType: String?
-    let size, downloadCount: Int?
-    let createdAt, updatedAt: Date?
-    let uploader: Author?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case browserDownloadURL = "browser_download_url"
-        case id
-        case nodeID = "node_id"
-        case name, label, state
-        case contentType = "content_type"
-        case size
-        case downloadCount = "download_count"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case uploader
-    }
-}
-
-struct Author: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct GetAReleaseByTagNameResponse: Codable {
     let url: String?
     let htmlURL: String?
@@ -4967,68 +2835,6 @@ struct GetAReleaseByTagNameResponse: Codable {
         case author, assets
     }
 }
-
-struct Asset: Codable {
-    let url: String?
-    let browserDownloadURL: String?
-    let id: Int?
-    let nodeID, name, label, state: String?
-    let contentType: String?
-    let size, downloadCount: Int?
-    let createdAt, updatedAt: Date?
-    let uploader: Author?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case browserDownloadURL = "browser_download_url"
-        case id
-        case nodeID = "node_id"
-        case name, label, state
-        case contentType = "content_type"
-        case size
-        case downloadCount = "download_count"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case uploader
-    }
-}
-
-struct Author: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 struct CreateAReleaseResponse: Codable {
     let url: String?
@@ -5062,284 +2868,6 @@ struct CreateAReleaseResponse: Codable {
     }
 }
 
-struct Author: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-// MARK: Encode/decode helpers
-
-class JSONNull: Codable, Hashable {
-
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
-        return true
-    }
-
-    public var hashValue: Int {
-        return 0
-    }
-
-    public init() {}
-
-    public required init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.singleValueContainer()
-        try container.encodeNil()
-    }
-}
-
-class JSONCodingKey: CodingKey {
-    let key: String
-
-    required init?(intValue: Int) {
-        return nil
-    }
-
-    required init?(stringValue: String) {
-        key = stringValue
-    }
-
-    var intValue: Int? {
-        return nil
-    }
-
-    var stringValue: String {
-        return key
-    }
-}
-
-class JSONAny: Codable {
-    let value: Any
-
-    static func decodingError(forCodingPath codingPath: [CodingKey]) -> DecodingError {
-        let context = DecodingError.Context(codingPath: codingPath, debugDescription: "Cannot decode JSONAny")
-        return DecodingError.typeMismatch(JSONAny.self, context)
-    }
-
-    static func encodingError(forValue value: Any, codingPath: [CodingKey]) -> EncodingError {
-        let context = EncodingError.Context(codingPath: codingPath, debugDescription: "Cannot encode JSONAny")
-        return EncodingError.invalidValue(value, context)
-    }
-
-    static func decode(from container: SingleValueDecodingContainer) throws -> Any {
-        if let value = try? container.decode(Bool.self) {
-            return value
-        }
-        if let value = try? container.decode(Int64.self) {
-            return value
-        }
-        if let value = try? container.decode(Double.self) {
-            return value
-        }
-        if let value = try? container.decode(String.self) {
-            return value
-        }
-        if container.decodeNil() {
-            return JSONNull()
-        }
-        throw decodingError(forCodingPath: container.codingPath)
-    }
-
-    static func decode(from container: inout UnkeyedDecodingContainer) throws -> Any {
-        if let value = try? container.decode(Bool.self) {
-            return value
-        }
-        if let value = try? container.decode(Int64.self) {
-            return value
-        }
-        if let value = try? container.decode(Double.self) {
-            return value
-        }
-        if let value = try? container.decode(String.self) {
-            return value
-        }
-        if let value = try? container.decodeNil() {
-            if value {
-                return JSONNull()
-            }
-        }
-        if var container = try? container.nestedUnkeyedContainer() {
-            return try decodeArray(from: &container)
-        }
-        if var container = try? container.nestedContainer(keyedBy: JSONCodingKey.self) {
-            return try decodeDictionary(from: &container)
-        }
-        throw decodingError(forCodingPath: container.codingPath)
-    }
-
-    static func decode(from container: inout KeyedDecodingContainer<JSONCodingKey>, forKey key: JSONCodingKey) throws -> Any {
-        if let value = try? container.decode(Bool.self, forKey: key) {
-            return value
-        }
-        if let value = try? container.decode(Int64.self, forKey: key) {
-            return value
-        }
-        if let value = try? container.decode(Double.self, forKey: key) {
-            return value
-        }
-        if let value = try? container.decode(String.self, forKey: key) {
-            return value
-        }
-        if let value = try? container.decodeNil(forKey: key) {
-            if value {
-                return JSONNull()
-            }
-        }
-        if var container = try? container.nestedUnkeyedContainer(forKey: key) {
-            return try decodeArray(from: &container)
-        }
-        if var container = try? container.nestedContainer(keyedBy: JSONCodingKey.self, forKey: key) {
-            return try decodeDictionary(from: &container)
-        }
-        throw decodingError(forCodingPath: container.codingPath)
-    }
-
-    static func decodeArray(from container: inout UnkeyedDecodingContainer) throws -> [Any] {
-        var arr: [Any] = []
-        while !container.isAtEnd {
-            let value = try decode(from: &container)
-            arr.append(value)
-        }
-        return arr
-    }
-
-    static func decodeDictionary(from container: inout KeyedDecodingContainer<JSONCodingKey>) throws -> [String: Any] {
-        var dict = [String: Any]()
-        for key in container.allKeys {
-            let value = try decode(from: &container, forKey: key)
-            dict[key.stringValue] = value
-        }
-        return dict
-    }
-
-    static func encode(to container: inout UnkeyedEncodingContainer, array: [Any]) throws {
-        for value in array {
-            if let value = value as? Bool {
-                try container.encode(value)
-            } else if let value = value as? Int64 {
-                try container.encode(value)
-            } else if let value = value as? Double {
-                try container.encode(value)
-            } else if let value = value as? String {
-                try container.encode(value)
-            } else if value is JSONNull {
-                try container.encodeNil()
-            } else if let value = value as? [Any] {
-                var container = container.nestedUnkeyedContainer()
-                try encode(to: &container, array: value)
-            } else if let value = value as? [String: Any] {
-                var container = container.nestedContainer(keyedBy: JSONCodingKey.self)
-                try encode(to: &container, dictionary: value)
-            } else {
-                throw encodingError(forValue: value, codingPath: container.codingPath)
-            }
-        }
-    }
-
-    static func encode(to container: inout KeyedEncodingContainer<JSONCodingKey>, dictionary: [String: Any]) throws {
-        for (key, value) in dictionary {
-            let key = JSONCodingKey(stringValue: key)!
-            if let value = value as? Bool {
-                try container.encode(value, forKey: key)
-            } else if let value = value as? Int64 {
-                try container.encode(value, forKey: key)
-            } else if let value = value as? Double {
-                try container.encode(value, forKey: key)
-            } else if let value = value as? String {
-                try container.encode(value, forKey: key)
-            } else if value is JSONNull {
-                try container.encodeNil(forKey: key)
-            } else if let value = value as? [Any] {
-                var container = container.nestedUnkeyedContainer(forKey: key)
-                try encode(to: &container, array: value)
-            } else if let value = value as? [String: Any] {
-                var container = container.nestedContainer(keyedBy: JSONCodingKey.self, forKey: key)
-                try encode(to: &container, dictionary: value)
-            } else {
-                throw encodingError(forValue: value, codingPath: container.codingPath)
-            }
-        }
-    }
-
-    static func encode(to container: inout SingleValueEncodingContainer, value: Any) throws {
-        if let value = value as? Bool {
-            try container.encode(value)
-        } else if let value = value as? Int64 {
-            try container.encode(value)
-        } else if let value = value as? Double {
-            try container.encode(value)
-        } else if let value = value as? String {
-            try container.encode(value)
-        } else if value is JSONNull {
-            try container.encodeNil()
-        } else {
-            throw encodingError(forValue: value, codingPath: container.codingPath)
-        }
-    }
-
-    public required init(from decoder: Decoder) throws {
-        if var arrayContainer = try? decoder.unkeyedContainer() {
-            self.value = try JSONAny.decodeArray(from: &arrayContainer)
-        } else if var container = try? decoder.container(keyedBy: JSONCodingKey.self) {
-            self.value = try JSONAny.decodeDictionary(from: &container)
-        } else {
-            let container = try decoder.singleValueContainer()
-            self.value = try JSONAny.decode(from: container)
-        }
-    }
-
-    public func encode(to encoder: Encoder) throws {
-        if let arr = self.value as? [Any] {
-            var container = encoder.unkeyedContainer()
-            try JSONAny.encode(to: &container, array: arr)
-        } else if let dict = self.value as? [String: Any] {
-            var container = encoder.container(keyedBy: JSONCodingKey.self)
-            try JSONAny.encode(to: &container, dictionary: dict)
-        } else {
-            var container = encoder.singleValueContainer()
-            try JSONAny.encode(to: &container, value: self.value)
-        }
-    }
-}
-
-
-
 struct EditAReleaseResponse: Codable {
     let url: String?
     let htmlURL: String?
@@ -5372,72 +2900,8 @@ struct EditAReleaseResponse: Codable {
     }
 }
 
-struct Asset: Codable {
-    let url: String?
-    let browserDownloadURL: String?
-    let id: Int?
-    let nodeID, name, label, state: String?
-    let contentType: String?
-    let size, downloadCount: Int?
-    let createdAt, updatedAt: Date?
-    let uploader: Author?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case browserDownloadURL = "browser_download_url"
-        case id
-        case nodeID = "node_id"
-        case name, label, state
-        case contentType = "content_type"
-        case size
-        case downloadCount = "download_count"
-        case createdAt = "created_at"
-        case updatedAt = "updated_at"
-        case uploader
-    }
-}
-
-struct Author: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct DeleteAReleaseResponse: Codable {
 }
-
-
 
 typealias ListAssetsForAReleaseResponse = [ListAssetsForAReleaseResponseElement]
 
@@ -5466,43 +2930,6 @@ struct ListAssetsForAReleaseResponseElement: Codable {
     }
 }
 
-struct Uploader: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct GetASingleReleaseAssetResponse: Codable {
     let url: String?
     let browserDownloadURL: String?
@@ -5527,43 +2954,6 @@ struct GetASingleReleaseAssetResponse: Codable {
         case uploader
     }
 }
-
-struct Uploader: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 struct EditAReleaseAssetResponse: Codable {
     let url: String?
@@ -5590,47 +2980,8 @@ struct EditAReleaseAssetResponse: Codable {
     }
 }
 
-struct Uploader: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
-
 struct DeleteAReleaseAssetResponse: Codable {
 }
-
-
 
 typealias GetContributorsListWithAdditionsDeletionsAndCommitCountsResponse = [GetContributorsListWithAdditionsDeletionsAndCommitCountsResponseElement]
 
@@ -5640,47 +2991,10 @@ struct GetContributorsListWithAdditionsDeletionsAndCommitCountsResponseElement: 
     let weeks: [Week]?
 }
 
-struct Author: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
 struct Week: Codable {
     let w: String?
     let a, d, c: Int?
 }
-
-
 
 typealias GetTheLastYearOfCommitActivityDataResponse = [GetTheLastYearOfCommitActivityDataResponseElement]
 
@@ -5689,21 +3003,13 @@ struct GetTheLastYearOfCommitActivityDataResponseElement: Codable {
     let total, week: Int?
 }
 
-
-
 typealias GetTheNumberOfAdditionsAndDeletionsPerWeekResponse = [[Int]]
-
-
 
 struct GetTheWeeklyCommitCountForTheRepositoryOwnerAndEveryoneElseResponse: Codable {
     let all, owner: [Int]?
 }
 
-
-
 typealias GetTheNumberOfCommitsPerHourInEachDayResponse = [[Int]]
-
-
 
 struct CreateAStatusResponse: Codable {
     let url: String?
@@ -5728,43 +3034,6 @@ struct CreateAStatusResponse: Codable {
         case creator
     }
 }
-
-struct Creator: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 typealias ListStatusesForASpecificRefResponse = [ListStatusesForASpecificRefResponseElement]
 
@@ -5791,43 +3060,6 @@ struct ListStatusesForASpecificRefResponseElement: Codable {
         case creator
     }
 }
-
-struct Creator: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
-
 
 struct GetTheCombinedStatusForASpecificRefResponse: Codable {
     let state: String?
@@ -5920,41 +3152,6 @@ struct Repository: Codable {
     }
 }
 
-struct Owner: Codable {
-    let login: String?
-    let id: Int?
-    let nodeID: String?
-    let avatarURL: String?
-    let gravatarID: String?
-    let url, htmlURL, followersURL: String?
-    let followingURL, gistsURL, starredURL: String?
-    let subscriptionsURL, organizationsURL, reposURL: String?
-    let eventsURL: String?
-    let receivedEventsURL: String?
-    let type: String?
-    let siteAdmin: Bool?
-
-    enum CodingKeys: String, CodingKey {
-        case login, id
-        case nodeID = "node_id"
-        case avatarURL = "avatar_url"
-        case gravatarID = "gravatar_id"
-        case url
-        case htmlURL = "html_url"
-        case followersURL = "followers_url"
-        case followingURL = "following_url"
-        case gistsURL = "gists_url"
-        case starredURL = "starred_url"
-        case subscriptionsURL = "subscriptions_url"
-        case organizationsURL = "organizations_url"
-        case reposURL = "repos_url"
-        case eventsURL = "events_url"
-        case receivedEventsURL = "received_events_url"
-        case type
-        case siteAdmin = "site_admin"
-    }
-}
-
 struct Status: Codable {
     let url: String?
     let avatarURL: String?
@@ -5977,8 +3174,6 @@ struct Status: Codable {
     }
 }
 
-
-
 typealias ListReferrersResponse = [ListReferrersResponseElement]
 
 struct ListReferrersResponseElement: Codable {
@@ -5986,16 +3181,12 @@ struct ListReferrersResponseElement: Codable {
     let count, uniques: Int?
 }
 
-
-
 typealias ListPathsResponse = [ListPathsResponseElement]
 
 struct ListPathsResponseElement: Codable {
     let path, title: String?
     let count, uniques: Int?
 }
-
-
 
 struct ViewsResponse: Codable {
     let count, uniques: Int?
@@ -6007,8 +3198,6 @@ struct View: Codable {
     let count, uniques: Int?
 }
 
-
-
 struct ClonesResponse: Codable {
     let count, uniques: Int?
     let clones: [Clone]?
@@ -6018,8 +3207,6 @@ struct Clone: Codable {
     let timestamp: Date?
     let count, uniques: Int?
 }
-
-
 
 typealias ListHooksResponse = [ListHooksResponseElement]
 
@@ -6042,18 +3229,6 @@ struct ListHooksResponseElement: Codable {
     }
 }
 
-struct Config: Codable {
-    let url: String?
-    let contentType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case contentType = "content_type"
-    }
-}
-
-
-
 struct GetSingleHookResponse: Codable {
     let id: Int?
     let url, testURL, pingURL: String?
@@ -6072,18 +3247,6 @@ struct GetSingleHookResponse: Codable {
         case createdAt = "created_at"
     }
 }
-
-struct Config: Codable {
-    let url: String?
-    let contentType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case contentType = "content_type"
-    }
-}
-
-
 
 struct CreateAHookResponse: Codable {
     let id: Int?
@@ -6104,18 +3267,6 @@ struct CreateAHookResponse: Codable {
     }
 }
 
-struct Config: Codable {
-    let url: String?
-    let contentType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case contentType = "content_type"
-    }
-}
-
-
-
 struct EditAHookResponse: Codable {
     let id: Int?
     let url, testURL, pingURL: String?
@@ -6135,37 +3286,19 @@ struct EditAHookResponse: Codable {
     }
 }
 
-struct Config: Codable {
-    let url: String?
-    let contentType: String?
-
-    enum CodingKeys: String, CodingKey {
-        case url
-        case contentType = "content_type"
-    }
-}
-
-
-
 struct TestAPushHookResponse: Codable {
 }
-
-
 
 struct PingAHookResponse: Codable {
 }
 
-
-
 struct DeleteAHookResponse: Codable {
 }
 
-
-    
       // https://developer.github.com/v3/repos/#list-organization-repositories
       /// List repositories for the specified org.
       func listForOrg() -> Response<ListOrganizationRepositoriesResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6177,14 +3310,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#list-all-public-repositories
       /// This provides a dump of every public repository, in the order that they were created.
 ///
 ///Note: Pagination is powered exclusively by the `since` parameter. Use the [Link header](https://developer.github.com/v3/#link-header) to get the URL for the next page of repositories.
       func listPublic() -> Response<ListAllPublicRepositoriesResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6196,7 +3328,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#create
       /// **Note**: There are two endpoints for creating a repository: one to create a repository on a user account, and one to create a repository in an organization. The organization endpoint is fully enabled for [GitHub Apps](https://developer.github.com/v3/apps/available-endpoints/), whereas the user endpoint is enabled only for [user-to-server requests](https://developer.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/#user-to-server-requests).
@@ -6208,7 +3339,7 @@ struct DeleteAHookResponse: Codable {
 ///*   `public_repo` scope or `repo` scope to create a public repository
 ///*   `repo` scope to create a private repository
       func createForAuthenticatedUser() -> Response<CreateANewRepositoryForTheAuthenticatedUserResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6220,7 +3351,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#create
       /// **Note**: There are two endpoints for creating a repository: one to create a repository on a user account, and one to create a repository in an organization. The organization endpoint is fully enabled for [GitHub Apps](https://developer.github.com/v3/apps/available-endpoints/), whereas the user endpoint is enabled only for [user-to-server requests](https://developer.github.com/apps/building-github-apps/identifying-and-authorizing-users-for-github-apps/#user-to-server-requests).
@@ -6232,7 +3362,7 @@ struct DeleteAHookResponse: Codable {
 ///*   `public_repo` scope or `repo` scope to create a public repository
 ///*   `repo` scope to create a private repository
       func createInOrg() -> Response<CreateANewRepositoryInThisOrganizationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6244,12 +3374,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#get
       /// The `parent` and `source` objects are present when the repository is a fork. `parent` is the repository this repository was forked from, `source` is the ultimate source for the network.
       func get() -> Response<GetResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6261,12 +3390,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#edit
       /// **Note**: To edit a repository's topics, use the [`topics` endpoint](#replace-all-topics-for-a-repository).
       func edit() -> Response<EditResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6278,12 +3406,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#list-all-topics-for-a-repository
       /// 
       func listTopics() -> Response<ListAllTopicsForARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6295,12 +3422,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#replace-all-topics-for-a-repository
       /// 
       func replaceTopics() -> Response<ReplaceAllTopicsForARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6312,12 +3438,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#list-languages
       /// Lists languages for the specified repository. The value shown for each language is the number of bytes of code written in that language.
       func listLanguages() -> Response<ListLanguagesResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6329,12 +3454,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#list-teams
       /// 
       func listTeams() -> Response<ListTeamsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6346,12 +3470,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#list-tags
       /// 
       func listTags() -> Response<ListTagsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6363,14 +3486,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#delete-a-repository
       /// Deleting a repository requires admin access. If OAuth is used, the `delete_repo` scope is required.
 ///
 ///If an organization owner has configured the organization to prevent members from deleting organization-owned repositories, a member will get this response:
       func delete() -> Response<DeleteARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6382,12 +3504,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/#transfer-a-repository
       /// A transfer request will need to be accepted by the new owner when transferring a personal repository to another user. The response will contain the original `owner`, and the transfer will continue asynchronously. For more details on the requirements to transfer personal and organization-owned repositories, see [about repository transfers](https://help.github.com/articles/about-repository-transfers/).
       func transfer() -> Response<TransferARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6399,12 +3520,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#list-branches
       /// 
       func listBranches() -> Response<ListBranchesResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6416,12 +3536,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#get-branch
       /// 
       func getBranch() -> Response<GetBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6433,12 +3552,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#get-branch-protection
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
       func getBranchProtection() -> Response<GetBranchProtectionResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6450,7 +3568,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#update-branch-protection
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6461,7 +3578,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///**Note**: The list of users and teams in total is limited to 100 items.
       func updateBranchProtection() -> Response<UpdateBranchProtectionResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6473,12 +3590,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#remove-branch-protection
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
       func removeBranchProtection() -> Response<RemoveBranchProtectionResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6490,12 +3606,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#get-required-status-checks-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
       func getProtectedBranchRequiredStatusChecks() -> Response<GetRequiredStatusChecksOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6507,14 +3622,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#update-required-status-checks-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
 ///
 ///Updating required status checks requires admin or owner permissions to the repository and branch protection to be enabled.
       func updateProtectedBranchRequiredStatusChecks() -> Response<UpdateRequiredStatusChecksOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6526,12 +3640,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#replace-required-status-checks-contexts-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
       func replaceProtectedBranchRequiredStatusChecksContexts() -> Response<ReplaceRequiredStatusChecksContextsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6543,12 +3656,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#add-required-status-checks-contexts-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
       func addProtectedBranchRequiredStatusChecksContexts() -> Response<AddRequiredStatusChecksContextsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6560,12 +3672,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#remove-required-status-checks-contexts-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
       func removeProtectedBranchRequiredStatusChecksContexts() -> Response<RemoveRequiredStatusChecksContextsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6577,7 +3688,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#update-pull-request-review-enforcement-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6586,7 +3696,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///**Note**: Passing new arrays of `users` and `teams` replaces their previous values.
       func updateProtectedBranchPullRequestReviewEnforcement() -> Response<UpdatePullRequestReviewEnforcementOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6598,7 +3708,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#get-required-signatures-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6607,7 +3716,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///**Note**: You must enable branch protection to require signed commits.
       func getProtectedBranchRequiredSignatures() -> Response<GetRequiredSignaturesOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6619,14 +3728,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#add-required-signatures-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
 ///
 ///When authenticated with admin or owner permissions to the repository, you can use this endpoint to require signed commits on a branch. You must enable branch protection to require signed commits.
       func addProtectedBranchRequiredSignatures() -> Response<AddRequiredSignaturesOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6638,14 +3746,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#add-admin-enforcement-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
 ///
 ///Adding admin enforcement requires admin or owner permissions to the repository and branch protection to be enabled.
       func addProtectedBranchAdminEnforcement() -> Response<AddAdminEnforcementOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6657,7 +3764,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#replace-team-restrictions-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6668,7 +3774,7 @@ struct DeleteAHookResponse: Codable {
 ///| ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 ///| `array` | The teams that can have push access. Use the team's `slug`. **Note**: The list of users and teams in total is limited to 100 items. |
       func replaceProtectedBranchTeamRestrictions() -> Response<ReplaceTeamRestrictionsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6680,7 +3786,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#add-team-restrictions-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6691,7 +3796,7 @@ struct DeleteAHookResponse: Codable {
 ///| ------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 ///| `array` | The teams that can have push access. Use the team's `slug`. **Note**: The list of users and teams in total is limited to 100 items. |
       func addProtectedBranchTeamRestrictions() -> Response<AddTeamRestrictionsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6703,7 +3808,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#remove-team-restrictions-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6714,7 +3818,7 @@ struct DeleteAHookResponse: Codable {
 ///| ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 ///| `array` | Teams that should no longer have push access. Use the team's `slug`. **Note**: The list of users and teams in total is limited to 100 items. |
       func removeProtectedBranchTeamRestrictions() -> Response<RemoveTeamRestrictionsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6726,7 +3830,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#replace-user-restrictions-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6737,7 +3840,7 @@ struct DeleteAHookResponse: Codable {
 ///| ------- | ---------------------------------------------------------------------------------------------------------------------- |
 ///| `array` | Usernames for people who can have push access. **Note**: The list of users and teams in total is limited to 100 items. |
       func replaceProtectedBranchUserRestrictions() -> Response<ReplaceUserRestrictionsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6749,7 +3852,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#add-user-restrictions-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6760,7 +3862,7 @@ struct DeleteAHookResponse: Codable {
 ///| ------- | ---------------------------------------------------------------------------------------------------------------------- |
 ///| `array` | Usernames for people who can have push access. **Note**: The list of users and teams in total is limited to 100 items. |
       func addProtectedBranchUserRestrictions() -> Response<AddUserRestrictionsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6772,7 +3874,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/branches/#remove-user-restrictions-of-protected-branch
       /// Protected branches are available in public repositories with GitHub Free, and in public and private repositories with GitHub Pro, GitHub Team, and GitHub Enterprise Cloud. For more information, see [GitHub's billing plans](https://help.github.com/articles/github-s-billing-plans) in the GitHub Help documentation.
@@ -6783,7 +3884,7 @@ struct DeleteAHookResponse: Codable {
 ///| ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 ///| `array` | Usernames of the people who should no longer have push access. **Note**: The list of users and teams in total is limited to 100 items. |
       func removeProtectedBranchUserRestrictions() -> Response<RemoveUserRestrictionsOfProtectedBranchResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6795,14 +3896,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/collaborators/#list-collaborators
       /// For organization-owned repositories, the list of collaborators includes outside collaborators, organization members that are direct collaborators, organization members with access through team memberships, organization members with access through default organization permissions, and organization owners.
 ///
 ///If you pass the `hellcat-preview` media type, team members will include the members of child teams.
       func listCollaborators() -> Response<ListCollaboratorsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6814,12 +3914,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/collaborators/#remove-user-as-a-collaborator
       /// 
       func removeCollaborator() -> Response<RemoveUserAsACollaboratorResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6831,7 +3930,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/comments/#list-commit-comments-for-a-repository
       /// Commit Comments use [these custom media types](#custom-media-types). You can read more about the use of media types in the API [here](https://developer.github.com/v3/media/).
@@ -6840,7 +3938,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///
       func listCommitComments() -> Response<ListCommitCommentsForARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6852,12 +3950,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/comments/#list-comments-for-a-single-commit
       /// 
       func listCommentsForCommit() -> Response<ListCommentsForASingleCommitResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6869,12 +3966,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/comments/#create-a-commit-comment
       /// This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
       func createCommitComment() -> Response<CreateACommitCommentResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6886,12 +3982,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/comments/#get-a-single-commit-comment
       /// 
       func getCommitComment() -> Response<GetASingleCommitCommentResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6903,12 +3998,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/comments/#update-a-commit-comment
       /// 
       func updateCommitComment() -> Response<UpdateACommitCommentResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6920,12 +4014,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/comments/#delete-a-commit-comment
       /// 
       func deleteCommitComment() -> Response<DeleteACommitCommentResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6937,12 +4030,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/commits/#list-commits-on-a-repository
       /// 
       func listCommits() -> Response<ListCommitsOnARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6954,12 +4046,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/commits/#get-a-single-commit
       /// Diffs with binary data will have no 'patch' property. Pass the appropriate [media type](https://developer.github.com/v3/media/#commits-commit-comparison-and-pull-requests) to fetch diff and patch formats.
       func getCommit() -> Response<GetASingleCommitResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6971,7 +4062,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/commits/#get-the-sha-1-of-a-commit-reference
       /// Users with read access can get the SHA-1 of a commit reference:
@@ -6986,7 +4076,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///
       func getCommitRefSha() -> Response<GetTheSHA1OfACommitReferenceResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -6998,12 +4088,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/community/#retrieve-community-profile-metrics
       /// This endpoint will return all community profile metrics, including an overall health score, repository description, the presence of documentation, detected code of conduct, detected license, and the presence of ISSUE\_TEMPLATE, PULL\_REQUEST\_TEMPLATE, README, and CONTRIBUTING files.
       func retrieveCommunityProfileMetrics() -> Response<RetrieveCommunityProfileMetricsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7015,14 +4104,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/contents/#get-the-readme
       /// Gets the preferred README for a repository.
 ///
 ///READMEs support [custom media types](#custom-media-types) for retrieving the raw content or rendered HTML.
       func getReadme() -> Response<GetTheREADMEResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7034,12 +4122,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/contents/#create-a-file
       /// Creates a new file in a repository.
       func createFile() -> Response<CreateAFileResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7051,12 +4138,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/contents/#update-a-file
       /// Updates a file in a repository.
       func updateFile() -> Response<UpdateAFileResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7068,7 +4154,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/contents/#delete-a-file
       /// Deletes a file in a repository.
@@ -7084,7 +4169,7 @@ struct DeleteAHookResponse: Codable {
 ///| name  | string | The name of the author (or committer) of the commit  |
 ///| email | string | The email of the author (or committer) of the commit |
       func deleteFile() -> Response<DeleteAFileResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7096,7 +4181,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/contents/#get-archive-link
       /// Gets a redirect URL to download an archive for a repository. The `:archive_format` can be either `tarball` or `zipball`. The `:ref` must be a valid Git reference. If you omit `:ref`, the repository’s default branch (usually `master`) will be used. Please make sure your HTTP framework is configured to follow redirects or you will need to use the `Location` header to make a second `GET` request.
@@ -7107,7 +4191,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///
       func getArchiveLink() -> Response<GetArchiveLinkResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7119,12 +4203,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/keys/#list-deploy-keys
       /// 
       func listDeployKeys() -> Response<ListDeployKeysResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7136,12 +4219,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/keys/#get-a-deploy-key
       /// 
       func getDeployKey() -> Response<GetADeployKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7153,14 +4235,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/keys/#add-a-new-deploy-key
       /// Here's how you can create a read-only deploy key:
 ///
 ///
       func addDeployKey() -> Response<AddANewDeployKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7172,12 +4253,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/keys/#remove-a-deploy-key
       /// 
       func removeDeployKey() -> Response<RemoveADeployKeyResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7189,12 +4269,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/deployments/#list-deployments
       /// Simple filtering of deployments is available via query parameters:
       func listDeployments() -> Response<ListDeploymentsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7206,12 +4285,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/deployments/#get-a-single-deployment
       /// 
       func getDeployment() -> Response<GetASingleDeploymentResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7223,12 +4301,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/deployments/#list-deployment-statuses
       /// Users with pull access can view deployment statuses for a deployment:
       func listDeploymentStatuses() -> Response<ListDeploymentStatusesResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7240,12 +4317,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/deployments/#get-a-single-deployment-status
       /// Users with pull access can view a deployment status for a deployment:
       func getDeploymentStatus() -> Response<GetASingleDeploymentStatusResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7257,14 +4333,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/deployments/#create-a-deployment-status
       /// Users with `push` access can create deployment statuses for a given deployment.
 ///
 ///GitHub Apps require `read & write` access to "Deployments" and `read-only` access to "Repo contents" (for private repos). OAuth Apps require the `repo_deployment` scope.
       func createDeploymentStatus() -> Response<CreateADeploymentStatusResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7276,12 +4351,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/downloads/#list-downloads-for-a-repository
       /// 
       func listDownloads() -> Response<ListDownloadsForARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7293,12 +4367,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/downloads/#get-a-single-download
       /// 
       func getDownload() -> Response<GetASingleDownloadResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7310,12 +4383,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/downloads/#delete-a-download
       /// 
       func deleteDownload() -> Response<DeleteADownloadResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7327,12 +4399,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/forks/#list-forks
       /// 
       func listForks() -> Response<ListForksResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7344,14 +4415,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/forks/#create-a-fork
       /// Create a fork for the authenticated user.
 ///
 ///**Note**: Forking a Repository happens asynchronously. You may have to wait a short period of time before you can access the git objects. If this takes longer than 5 minutes, be sure to contact [GitHub Support](https://github.com/contact).
       func createFork() -> Response<CreateAForkResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7363,14 +4433,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/invitations/#list-invitations-for-a-repository
       /// When authenticating as a user with admin rights to a repository, this endpoint will list all currently open repository invitations.
 ///
 ///
       func listInvitations() -> Response<ListInvitationsForARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7382,12 +4451,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/invitations/#delete-a-repository-invitation
       /// 
       func deleteInvitation() -> Response<DeleteARepositoryInvitationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7399,12 +4467,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/invitations/#update-a-repository-invitation
       /// 
       func updateInvitation() -> Response<UpdateARepositoryInvitationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7416,14 +4483,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/invitations/#list-a-users-repository-invitations
       /// When authenticating as a user, this endpoint will list all currently open repository invitations for that user.
 ///
 ///
       func listInvitationsForAuthenticatedUser() -> Response<ListAUser'SRepositoryInvitationsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7435,12 +4501,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/invitations/#accept-a-repository-invitation
       /// 
       func acceptInvitation() -> Response<AcceptARepositoryInvitationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7452,12 +4517,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/invitations/#decline-a-repository-invitation
       /// 
       func declineInvitation() -> Response<DeclineARepositoryInvitationResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7469,7 +4533,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/pages/#get-information-about-a-pages-site
       /// Responses during the preview period contain two additional fields:
@@ -7479,7 +4542,7 @@ struct DeleteAHookResponse: Codable {
 ///    *   `branch`: The repo branch for [site source files](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/) For example, _master_ or _gh-pages_.
 ///    *   `path`: The repo directory from which the site publishes. Can be either `/` or `/docs`.
       func getPages() -> Response<GetInformationAboutAPagesSiteResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7491,12 +4554,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/pages/#update-information-about-a-pages-site
       /// 
       func updateInformationAboutPagesSite() -> Response<UpdateInformationAboutAPagesSiteResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7508,14 +4570,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/pages/#request-a-page-build
       /// You can request that your site be built from the latest revision on the default branch. This has the same effect as pushing a commit to your default branch, but does not require an additional commit. Manually triggering page builds can be helpful when diagnosing build warnings and failures.
 ///
 ///Build requests are limited to one concurrent build per repository and one concurrent build per requester. If you request a build while another is still in progress, the second request will be queued until the first completes.
       func requestPageBuild() -> Response<RequestAPageBuildResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7527,14 +4588,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#list-releases-for-a-repository
       /// This returns a list of releases, which does not include regular Git tags that have not been associated with a release. To get a list of Git tags, use the [Repository Tags API](https://developer.github.com/v3/repos/#list-tags).
 ///
 ///Information about published releases are available to everyone. Only users with push access will receive listings for draft releases.
       func listReleases() -> Response<ListReleasesForARepositoryResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7546,12 +4606,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#get-a-single-release
       /// **Note:** This returns an `upload_url` key corresponding to the endpoint for uploading release assets. This key is a [hypermedia resource](https://developer.github.com/v3/#hypermedia).
       func getRelease() -> Response<GetASingleReleaseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7563,12 +4622,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#get-the-latest-release
       /// View the latest published full release for the repository. Draft releases and prereleases are not returned by this endpoint.
       func getLatestRelease() -> Response<GetTheLatestReleaseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7580,12 +4638,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#get-a-release-by-tag-name
       /// Get a published release with the specified tag.
       func getReleaseByTag() -> Response<GetAReleaseByTagNameResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7597,14 +4654,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#create-a-release
       /// Users with push access to the repository can create a release.
 ///
 ///This endpoint triggers [notifications](https://help.github.com/articles/about-notifications/). Creating content too quickly using this endpoint may result in abuse rate limiting. See "[Abuse rate limits](https://developer.github.com/v3/#abuse-rate-limits)" and "[Dealing with abuse rate limits](https://developer.github.com/v3/guides/best-practices-for-integrators/#dealing-with-abuse-rate-limits)" for details.
       func createRelease() -> Response<CreateAReleaseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7616,12 +4672,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#edit-a-release
       /// Users with push access to the repository can edit a release.
       func editRelease() -> Response<EditAReleaseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7633,12 +4688,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#delete-a-release
       /// Users with push access to the repository can delete a release.
       func deleteRelease() -> Response<DeleteAReleaseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7650,12 +4704,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#list-assets-for-a-release
       /// 
       func listAssetsForRelease() -> Response<ListAssetsForAReleaseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7667,12 +4720,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#get-a-single-release-asset
       /// To download the asset's binary content, set the `Accept` header of the request to [`application/octet-stream`](https://developer.github.com/v3/media/#media-types). The API will either redirect the client to the location, or stream it directly if possible. API clients should handle both a `200` or `302` response.
       func getReleaseAsset() -> Response<GetASingleReleaseAssetResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7684,12 +4736,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#edit-a-release-asset
       /// Users with push access to the repository can edit a release asset.
       func editReleaseAsset() -> Response<EditAReleaseAssetResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7701,12 +4752,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/releases/#delete-a-release-asset
       /// 
       func deleteReleaseAsset() -> Response<DeleteAReleaseAssetResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7718,7 +4768,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/statistics/#get-contributors-list-with-additions-deletions-and-commit-counts
       /// *   `total` - The Total number of commits authored by the contributor.
@@ -7731,12 +4780,12 @@ struct DeleteAHookResponse: Codable {
 ///*   `c` - Number of commits
 ///
 ///
-      func getContributorsStats() -> Response<GetContributorsListWithAdditions,Deletions,AndCommitCountsResponse> {
-      
+      func getContributorsStats() -> Response<GetContributorsListWithAdditions, Deletions, AndCommitCountsResponse> {
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
-          let body = try decoder.decode(GetContributorsListWithAdditions,Deletions,AndCommitCountsResponse.self, from: data)
+          let body = try decoder.decode(GetContributorsListWithAdditions, Deletions, AndCommitCountsResponse.self, from: data)
           return Response(body: body, error: nil)
 
         } catch {
@@ -7744,14 +4793,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/statistics/#get-the-last-year-of-commit-activity-data
       /// Returns the last year of commit activity grouped by week. The `days` array is a group of commits per day, starting on `Sunday`.
 ///
 ///
       func getCommitActivityStats() -> Response<GetTheLastYearOfCommitActivityDataResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7763,14 +4811,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/statistics/#get-the-number-of-additions-and-deletions-per-week
       /// Returns a weekly aggregate of the number of additions and deletions pushed to a repository.
 ///
 ///
       func getCodeFrequencyStats() -> Response<GetTheNumberOfAdditionsAndDeletionsPerWeekResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7782,7 +4829,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/statistics/#get-the-weekly-commit-count-for-the-repository-owner-and-everyone-else
       /// Returns the total commit counts for the `owner` and total commit counts in `all`. `all` is everyone combined, including the `owner` in the last 52 weeks. If you'd like to get the commit counts for non-owners, you can subtract `owner` from `all`.
@@ -7791,7 +4837,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///
       func getParticipationStats() -> Response<GetTheWeeklyCommitCountForTheRepositoryOwnerAndEveryoneElseResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7803,7 +4849,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/statistics/#get-the-number-of-commits-per-hour-in-each-day
       /// Each array contains the day number, hour number, and number of commits:
@@ -7814,7 +4859,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///For example, `[2, 14, 25]` indicates that there were 25 total commits, during the 2:00pm hour on Tuesdays. All times are based on the time zone of individual commits.
       func getPunchCardStats() -> Response<GetTheNumberOfCommitsPerHourInEachDayResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7826,14 +4871,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/statuses/#create-a-status
       /// Users with push access in a repository can create commit statuses for a given SHA.
 ///
 ///Note: there is a limit of 1000 statuses per `sha` and `context` within a repository. Attempts to create more than 1000 statuses will result in a validation error.
       func createStatus() -> Response<CreateAStatusResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7845,14 +4889,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/statuses/#list-statuses-for-a-specific-ref
       /// Users with pull access in a repository can view commit statuses for a given ref. The ref can be a SHA, a branch name, or a tag name. Statuses are returned in reverse chronological order. The first status in the list will be the latest one.
 ///
 ///This resource is also available via a legacy route: `GET /repos/:owner/:repo/statuses/:ref`.
       func listStatusesForRef() -> Response<ListStatusesForASpecificRefResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7864,7 +4907,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/statuses/#get-the-combined-status-for-a-specific-ref
       /// Users with pull access in a repository can access a combined view of commit statuses for a given ref. The ref can be a SHA, a branch name, or a tag name.
@@ -7877,7 +4919,7 @@ struct DeleteAHookResponse: Codable {
 ///*   **pending** if there are no statuses or a context is `pending`
 ///*   **success** if the latest status for all contexts is `success`
       func getCombinedStatusForRef() -> Response<GetTheCombinedStatusForASpecificRefResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7889,12 +4931,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/traffic/#list-referrers
       /// Get the top 10 referrers over the last 14 days.
       func getTopReferrers() -> Response<ListReferrersResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7906,12 +4947,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/traffic/#list-paths
       /// Get the top 10 popular contents over the last 14 days.
       func getTopPaths() -> Response<ListPathsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7923,12 +4963,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/traffic/#views
       /// Get the total number of views and breakdown per day or week for the last 14 days. Timestamps are aligned to UTC midnight of the beginning of the day or week. Week begins on Monday.
       func getViews() -> Response<ViewsResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7940,12 +4979,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/traffic/#clones
       /// Get the total number of clones and breakdown per day or week for the last 14 days. Timestamps are aligned to UTC midnight of the beginning of the day or week. Week begins on Monday.
       func getClones() -> Response<ClonesResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7957,12 +4995,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/hooks/#list-hooks
       /// 
       func listHooks() -> Response<ListHooksResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7974,12 +5011,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/hooks/#get-single-hook
       /// 
       func getHook() -> Response<GetSingleHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -7991,7 +5027,6 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/hooks/#create-a-hook
       /// Repositories can have multiple webhooks installed. Each webhook should have a unique `config`. Multiple webhooks can share the same `config` as long as those webhooks do not have any `events` that overlap.
@@ -8000,7 +5035,7 @@ struct DeleteAHookResponse: Codable {
 ///
 ///Here's how you can create a hook that posts payloads in JSON format:
       func createHook() -> Response<CreateAHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -8012,12 +5047,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/hooks/#edit-a-hook
       /// 
       func editHook() -> Response<EditAHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -8029,14 +5063,13 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/hooks/#test-a-push-hook
       /// This will trigger the hook with the latest push to the current repository if the hook is subscribed to `push` events. If the hook is not subscribed to `push` events, the server will respond with 204 but no test POST will be generated.
 ///
 ///**Note**: Previously `/repos/:owner/:repo/hooks/:hook_id/test`
       func testPushHook() -> Response<TestAPushHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -8048,12 +5081,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/hooks/#ping-a-hook
       /// This will trigger a [ping event](https://developer.github.com/webhooks/#ping-event) to be sent to the hook.
       func pingHook() -> Response<PingAHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -8065,12 +5097,11 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
 
       // https://developer.github.com/v3/repos/hooks/#delete-a-hook
       /// 
       func deleteHook() -> Response<DeleteAHookResponse> {
-      
+
         let data = Data()
         do {
           let decoder = JSONDecoder()
@@ -8082,7 +5113,7 @@ struct DeleteAHookResponse: Codable {
           return Response(body: nil, error: error)
         }
       }
-      
+
   }
 
   var repos: OctoDog.Repos {
