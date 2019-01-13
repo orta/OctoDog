@@ -1164,11 +1164,11 @@ extension OctoDog {
         /// Requires the user to be authenticated.
         ///
         /// Note that you'll need to set `Content-Length` to zero when calling out to this endpoint. For more information, see "[HTTP verbs](https://developer.github.com/v3/#http-verbs)."
-        func watchRepoLegacy() -> Response<WatchARepository(LEGACY) Response> {
+        func watchRepoLegacy() -> Response<WatchARepositoryLEGACYResponse> {
             let data = Data()
             do {
                 let decoder = JSONDecoder()
-                let body = try decoder.decode(WatchARepository(LEGACY) Response.self, from: data)
+                let body = try decoder.decode(WatchARepositoryLEGACYResponse.self, from: data)
                 return Response(body: body, error: nil)
 
             } catch {
@@ -1179,11 +1179,11 @@ extension OctoDog {
 
         // https://developer.github.com/v3/activity/watching/#stop-watching-a-repository-legacy
         /// Requires for the user to be authenticated.
-        func stopWatchingRepoLegacy() -> Response<StopWatchingARepository(LEGACY) Response> {
+        func stopWatchingRepoLegacy() -> Response<StopWatchingARepositoryLEGACYResponse> {
             let data = Data()
             do {
                 let decoder = JSONDecoder()
-                let body = try decoder.decode(StopWatchingARepository(LEGACY) Response.self, from: data)
+                let body = try decoder.decode(StopWatchingARepositoryLEGACYResponse.self, from: data)
                 return Response(body: body, error: nil)
 
             } catch {

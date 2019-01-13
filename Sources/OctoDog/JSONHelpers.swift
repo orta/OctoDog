@@ -1,6 +1,6 @@
 // MARK: Encode/decode helpers
 
-class JSONNull: Codable, Hashable {
+public class JSONNull: Codable, Hashable {
   public static func == (_: JSONNull, _: JSONNull) -> Bool {
     return true
   }
@@ -24,27 +24,27 @@ class JSONNull: Codable, Hashable {
   }
 }
 
-class JSONCodingKey: CodingKey {
+public class JSONCodingKey: CodingKey {
   let key: String
 
-  required init?(intValue _: Int) {
+  public required init?(intValue _: Int) {
     return nil
   }
 
-  required init?(stringValue: String) {
+  public required init?(stringValue: String) {
     key = stringValue
   }
 
-  var intValue: Int? {
+  public var intValue: Int? {
     return nil
   }
 
-  var stringValue: String {
+  public var stringValue: String {
     return key
   }
 }
 
-class JSONAny: Codable {
+public class JSONAny: Codable {
   let value: Any
 
   static func decodingError(forCodingPath codingPath: [CodingKey]) -> DecodingError {

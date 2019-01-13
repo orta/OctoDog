@@ -1187,11 +1187,11 @@ extension OctoDog {
         /// Be aware that the `id` of a pull request returned from "Issues" endpoints will be an _issue id_. To find out the pull request id, use the "[List pull requests](https://developer.github.com/v3/pulls/#list-pull-requests)" endpoint.
         ///
         ///
-        func list() -> Response<ListAllIssuesAssignedToTheAuthenticatedUserAcrossAllVisibleRepositoriesIncludingOwnedRepositories, MemberRepositories, AndOrganizationRepositoriesResponse> {
+        func list() -> Response<ListAllIssuesAssignedToTheAuthenticatedUserAcrossAllVisibleRepositoriesIncludingOwnedRepositoriesMemberRepositoriesAndOrganizationRepositoriesResponse> {
             let data = Data()
             do {
                 let decoder = JSONDecoder()
-                let body = try decoder.decode(ListAllIssuesAssignedToTheAuthenticatedUserAcrossAllVisibleRepositoriesIncludingOwnedRepositories, MemberRepositories, AndOrganizationRepositoriesResponse.self, from: data)
+                let body = try decoder.decode(ListAllIssuesAssignedToTheAuthenticatedUserAcrossAllVisibleRepositoriesIncludingOwnedRepositoriesMemberRepositoriesAndOrganizationRepositoriesResponse.self, from: data)
                 return Response(body: body, error: nil)
 
             } catch {

@@ -135,7 +135,7 @@ function camelize(str: string) {
       return index == 0 ? letter.toLowerCase() : letter.toUpperCase()
     })
     .replace(/\s+/g, "")
-    .replace(/[^\x00-\x7F]/g, "")
+    .replace(/[^a-z0-9]/gi, "")
 }
 
 export function toVarName(str: string) {
